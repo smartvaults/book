@@ -43,17 +43,16 @@ config.save().await?;
 let client = ...; // The client that you before constructed
 
 for (relay_url, relay) in client.relays().await.into_iter() {
+    let stats = relay.stats();
     println!("Url: {relay_url}");
     println!("Status: {}", relay.status().await);
-    let stats = relay.stats();
-    println!("Connection attempts: {}", stats.attempts());
-    println!("Connection success: {}", stats.success());
+    println!("Attempts: {}", stats.attempts());
+    println!("Success: {}", stats.success());
     println!("Bytes sent: {}", stats.bytes_sent());
     println!("Bytes received: {}", stats.bytes_received());
-    println!(
-        "Connection latency: {} ms",
-        stats.latency().await.unwrap_or_default().as_millis()
-    );
+    if let Some(latency) = stats.latency().await {
+        println!("Latency: {} ms", latency.as_millis());
+    }
 }
 # }
 ```

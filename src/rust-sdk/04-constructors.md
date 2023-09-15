@@ -13,6 +13,8 @@ it in a local [encrypted keychain](./keychain.md).
 ```rust,no_run
 use smartvaults_sdk::prelude::*;
 
+# #[tokio::main]
+# async fn main() {
 let client = SmartVaults::generate(
     "./your-base-path", // A local path where to store all the data
     "account-name", // This will be used for the keychain file name
@@ -23,6 +25,7 @@ let client = SmartVaults::generate(
     Network::Testnet, // The bitcoin network to use
 )
 .await?;
+# }
 ```
 
 ## Restore
@@ -33,6 +36,8 @@ it in a local [encrypted keychain](./keychain.md).
 ```rust,no_run
 use smartvaults_sdk::prelude::*;
 
+# #[tokio::main]
+# async fn main() {
 let client = SmartVaults::restore(
     "./your-base-path", // A local path where to store all the data
     "account-name", // This will be used for the keychain file name
@@ -43,6 +48,7 @@ let client = SmartVaults::restore(
     Network::Testnet, // The bitcoin network to use
 )
 .await?;
+# }
 ```
 
 ## Open
@@ -52,6 +58,8 @@ This constructor open an **already existing** keychain.
 ```rust,no_run
 use smartvaults_sdk::prelude::*;
 
+# #[tokio::main]
+# async fn main() {
 let client = SmartVaults::open(
     "./your-base-path",
     "account-name",
@@ -59,4 +67,5 @@ let client = SmartVaults::open(
     Network::Testnet,
 )
 .await?;
+# }
 ```

@@ -7,6 +7,10 @@ Note: both the configs and relays are persistent, so you **not** need to edit th
 ## View and edit configs
 
 ```rust,no_run
+# use smartvaults_sdk::prelude::*;
+#
+# #[tokio::main]
+# async fn main() {
 let client = ...; // The client that you before constructed
 
 // Get the current configs
@@ -26,11 +30,16 @@ config.set_block_explorer(Some(url)).await;
 
 // Save the configs in the persistent file
 config.save().await?;
+# }
 ```
 
 ## View relays
 
 ```rust,no_run
+# use smartvaults_sdk::prelude::*;
+#
+# #[tokio::main]
+# async fn main() {
 let client = ...; // The client that you before constructed
 
 for (relay_url, relay) in client.relays().await.into_iter() {
@@ -46,13 +55,17 @@ for (relay_url, relay) in client.relays().await.into_iter() {
         stats.latency().await.unwrap_or_default().as_millis()
     );
 }
+# }
 ```
 
 ## Edit relays
 
 ```rust,no_run
 use std::net::{Ipv4Addr, SocketAddr, SocketAddrV4};
-
+# use smartvaults_sdk::prelude::*;
+#
+# #[tokio::main]
+# async fn main() {
 let client = ...; // The client that you before constructed
 
 // Add a relay (without proxy)
@@ -64,4 +77,5 @@ client.add_relay("wss://you.relay2.com", Some(proxy)).await?;
 
 // Remove a relay
 client.remove_relay("wss://you.relay.com").await?;
+# }
 ```

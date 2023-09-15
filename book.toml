@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Smart Vaults Book"
+
+[output.html]
+git-repository-url = "https://github.com/smartvaults/book"
+edit-url-template = "https://github.com/smartvaults/book/edit/master/{path}"

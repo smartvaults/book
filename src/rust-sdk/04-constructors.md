@@ -8,7 +8,7 @@ All these when constructed return a ready to use client.
 ## Generate
 
 This constructor generate a random [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) mnemonic and store
-it in a local [encrypted keychain](./keychain.md).
+it in a local [encrypted keychain](./keychain/01-index.md).
 
 ```rust,no_run
 use smartvaults_sdk::prelude::*;
@@ -31,7 +31,7 @@ let client = SmartVaults::generate(
 ## Restore
 
 This constructor restore a [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) mnemonic and store
-it in a local [encrypted keychain](./keychain.md).
+it in a local [encrypted keychain](./keychain/01-index.md).
 
 ```rust,no_run
 use smartvaults_sdk::prelude::*;

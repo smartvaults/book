@@ -34,7 +34,7 @@ println!("New proposal: {proposal:#?}");
 
 ## Approvals
 
-Currently you can approve a proposal with the `seed` stored in the [keychain](./keychain.md) or use an `AirGap` signer and import
+Currently you can approve a proposal with the `seed` stored in the [keychain](./keychain/01-index.md) or use an `AirGap` signer and import
 the signed PSBT.
 
 ### Approve with the seed

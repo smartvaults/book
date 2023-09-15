@@ -2,7 +2,7 @@
 
 [Introduction](README.md)
 
-# Getting Started
+# SDKs
 
 - [Rust SDK](./rust-sdk/01-getting-started.md)
     * [Installation](./rust-sdk/02-installation.md)
@@ -14,5 +14,15 @@
 
 - [JavaScript SDK](./js-sdk/getting-started.md)
     * [Installation](./js-sdk/installation.md)
+
+# Nostr Specs
+- [Event Kinds](./kinds/index.md)
+
+# Miniscript Templates
+- [Collaborative Custody](./miniscript-templates/m-of-n.md)
+- [Hodl Lock](./miniscript-templates/hold.md)
+- [Inheritance](./miniscript-templates/inheritance.md)
+- [Social Recovery](./miniscript-templates/social-recovery.md)
+
 
 # About

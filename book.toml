@@ -1,0 +1,6 @@
+[book]
+authors = ["Yuki Kishimoto <yukikishimoto@protonmail.com>"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Smart Vaults Book"

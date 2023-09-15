@@ -22,8 +22,7 @@ let client = SmartVaults::generate(
     || Ok(None), // Optional passphrase that will be stored in the keychain
     Network::Testnet, // The bitcoin network to use
 )
-.await
-.unwrap();
+.await?;
 ```
 
 ## Restore
@@ -43,8 +42,7 @@ let client = SmartVaults::restore(
     || Ok(Some(String::from("my-optional-passphrase"))), // Optional passphrase that will be stored in the keychain
     Network::Testnet, // The bitcoin network to use
 )
-.await
-.unwrap();
+.await?;
 ```
 
 ## Open
@@ -60,6 +58,5 @@ let client = SmartVaults::open(
     || Ok(String::from("password")),
     Network::Testnet,
 )
-.await
-.unwrap();
+.await?;
 ```

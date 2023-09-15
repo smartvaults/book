@@ -13,10 +13,7 @@
         * [Templates](./rust-sdk/06-policies/02-templates.md)
         * [Custom policies](./rust-sdk/06-policies/03-custom-policies.md)
         * [Funding](./rust-sdk/06-policies/04-funding.md)
-        * [Spend](./rust-sdk/06-policies/05-spend.md)
-    * [Proposals](./rust-sdk/07-proposals/01-index.md)
-        * [Approvals](./rust-sdk/07-proposals/02-approvals.md)
-        * [Finalization](./rust-sdk/07-proposals/03-finalization.md)
+    * [Proposals](./rust-sdk/07-proposals.md)
     * [Keychain](./rust-sdk/keychain.md)
 
 - [JavaScript SDK](./js-sdk/getting-started.md)

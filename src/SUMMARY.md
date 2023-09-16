@@ -20,6 +20,7 @@
     * [Keychain](./rust-sdk/keychain/01-index.md)
         * [Change password](./rust-sdk/keychain/02-change-password.md)
         * [Secrets](./rust-sdk/keychain/03-secrets.md)
+        * [Wipe](./rust-sdk/keychain/04-wipe.md)
 
 - [JavaScript SDK](./js-sdk/getting-started.md)
     * [Installation](./js-sdk/installation.md)

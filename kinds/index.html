@@ -1,0 +1,361 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Event Kinds - Smart Vaults Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">SDKs</li><li class="chapter-item expanded "><a href="../rust-sdk/01-getting-started.html"><strong aria-hidden="true">1.</strong> Rust SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/02-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../rust-sdk/03-features.html"><strong aria-hidden="true">1.2.</strong> Features</a></li><li class="chapter-item expanded "><a href="../rust-sdk/04-constructors.html"><strong aria-hidden="true">1.3.</strong> Constructors</a></li><li class="chapter-item expanded "><a href="../rust-sdk/05-configs-and-relays.html"><strong aria-hidden="true">1.4.</strong> Configs & Relays</a></li><li class="chapter-item expanded "><a href="../rust-sdk/06-profile-and-contacts.html"><strong aria-hidden="true">1.5.</strong> Profile & Contacts</a></li><li class="chapter-item expanded "><a href="../rust-sdk/07-signers.html"><strong aria-hidden="true">1.6.</strong> Signers</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/01-index.html"><strong aria-hidden="true">1.7.</strong> Policies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/02-templates.html"><strong aria-hidden="true">1.7.1.</strong> Templates</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/03-custom-policies.html"><strong aria-hidden="true">1.7.2.</strong> Custom policies</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/04-funding.html"><strong aria-hidden="true">1.7.3.</strong> Funding</a></li></ol></li><li class="chapter-item expanded "><a href="../rust-sdk/09-proposals.html"><strong aria-hidden="true">1.8.</strong> Proposals</a></li><li class="chapter-item expanded "><a href="../rust-sdk/10-connect.html"><strong aria-hidden="true">1.9.</strong> Connect</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/01-index.html"><strong aria-hidden="true">1.10.</strong> Keychain</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/keychain/02-change-password.html"><strong aria-hidden="true">1.10.1.</strong> Change password</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/03-secrets.html"><strong aria-hidden="true">1.10.2.</strong> Secrets</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/04-wipe.html"><strong aria-hidden="true">1.10.3.</strong> Wipe</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../js-sdk/getting-started.html"><strong aria-hidden="true">2.</strong> JavaScript SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js-sdk/installation.html"><strong aria-hidden="true">2.1.</strong> Installation</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Nostr Specs</li><li class="chapter-item expanded "><a href="../kinds/index.html" class="active"><strong aria-hidden="true">3.</strong> Event Kinds</a></li><li class="chapter-item expanded affix "><li class="part-title">Miniscript Templates</li><li class="chapter-item expanded "><a href="../miniscript-templates/m-of-n.html"><strong aria-hidden="true">4.</strong> Collaborative Custody</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/hold.html"><strong aria-hidden="true">5.</strong> Hodl Lock</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/inheritance.html"><strong aria-hidden="true">6.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/social-recovery.html"><strong aria-hidden="true">7.</strong> Social Recovery</a></li><li class="chapter-item expanded affix "><li class="part-title">About</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Smart Vaults Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/smartvaults/book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/smartvaults/book/edit/master/src/kinds/index.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="kinds"><a class="header" href="#kinds">Kinds</a></h1>
+<h2 id="9288---shared-key"><a class="header" href="#9288---shared-key">9288 - Shared Key</a></h2>
+<p>This kind it's used to share shared keys between participants of a <code>vault</code>. 
+It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;PDj1bNB1PuWKzPc1RrKBmbEeXDaYkxRIsAqTraJscUq4ML3+mZzJq4O6vPkkIJeZuNQTp0EyLxAvUblXCgJxaEgwxRWQC+rpdz3ILjdQA2w=?iv=B5KnzXU7smmAWevhTi1rSg==&quot;,
+    &quot;created_at&quot;:1693903672,
+    &quot;id&quot;:&quot;6bc1eb162aa5d0623370d808578d15a77e1e91a55ee93255ec070d5e03b4c87f&quot;,
+    &quot;kind&quot;:9288,
+    &quot;pubkey&quot;:&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;,
+    &quot;sig&quot;:&quot;ad9bc22082b5b5d23b75bb3752109b1d6d97a7ff29f1effdc710943c69f7550479856c06e76e4361e033be7400a27a9e688b3a4cf417840b7dd2b0df1403ec39&quot;,
+    &quot;tags&quot;:[
+        [&quot;e&quot;,&quot;071dd01141b000f7d0c9f8172101e8efb5771939456d8e4a3f8b37f6d458e82d&quot;], // Policy ID
+        [&quot;p&quot;,&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;]
+    ]
+}
+</code></pre>
+<h2 id="9289---vault"><a class="header" href="#9289---vault">9289 - Vault</a></h2>
+<p>TODO: description</p>
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;uTK3M5F958K1HKEJf/8ciVNLVw0u6dwkSANxWGBkZvpM3/3kIR/miLUPGuYLskl8ttBcLRXU07fq1mhC0+PsppJo5PQ3XyWFGWGWOQXktOKPIhpQcbpX6xCZACKN9BP6x1kCt8RCJB8nwqx0mD21syZRoQdOqKXWR/1r4rqknMS4uPY3nwT15vkP0p6zP6ZD4m9ykBhiRhGiUYxdakMcKcfHt1R22OF0trCt1+KpL9cdVqHpiiJy9hofgKb7wqPFnwcoRVlariXoQIIOoZHzOS69rzmqLFAyz6PWl2ifSwhDX9VCMw6vzp8Trp0lO/txhGW6+mIn9DBebj0cJQCygUaUmpzyBXOAzuzndUDPHMsls12qeOfX64edLgGyC/jL7qG9HS6Z1Wo91jlpqwTmqY3yzMGGcMZ01VkJ0jmbB8OuuO/BfrU3YMLQMAXMyc8BVyyksNIrG9tEMJlGDe4w1Wl2Ss7jiZRqLzuJua7w0RpApAmQ8zAsaDojVOEES87/pG+Pl6EyQxnofMMmdi1A+LSBQBAjtglGdKaK740I6Cjc2acBwqohiM8CV+tbTCqn?iv=fPuKqXaCoczpZ/3eikrTbQ==&quot;,
+    &quot;created_at&quot;:1686479425,
+    &quot;id&quot;:&quot;9e0dfd2177ea9357f0c165ed134a86a3c07449676d8315e12d159932ff428e37&quot;,
+    &quot;kind&quot;:9289,
+    &quot;pubkey&quot;:&quot;4639e297633117888df17deed6b3860ff152e9e464690623b6b3d6ae4923ad62&quot;,
+    &quot;sig&quot;:&quot;2ff3f48a7e80db25418df983c732edbc495b0fb28f4fdf051955867c0e180131f7f7e9499957adee76bc9fdedc5fb7c8a71ec7e1655322e39cf5d4f590bfcd15&quot;,
+    &quot;tags&quot;:[
+        [&quot;p&quot;,&quot;3eea9e831fefdaa8df35187a204d82edb589a36b170955ac5ca6b88340befaa0&quot;],
+        [&quot;p&quot;,&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;]
+    ]
+}
+</code></pre>
+<h2 id="9090---proposal"><a class="header" href="#9090---proposal">9090 - Proposal</a></h2>
+<p>TODO: description</p>
+<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;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?iv=whier1QoEXYwFJhwcpcl3A==&quot;,
+    &quot;created_at&quot;:1694781913,
+    &quot;id&quot;:&quot;726e919e26dcc70dbc3926660afa589793233ca6c94e69f9687fd03c02f74263&quot;,
+    &quot;kind&quot;:9290,
+    &quot;pubkey&quot;:&quot;4639e297633117888df17deed6b3860ff152e9e464690623b6b3d6ae4923ad62&quot;,
+    &quot;sig&quot;:&quot;5c88ff5bf65fe8da798bfd8303f493040055748d6c06d623b26393d78631edc0dadd79a4cd6f10930feb43d23900390c7dabbf5287c4a32b8c0970a6a3e9d0c1&quot;,
+    &quot;tags&quot;:[
+        [&quot;p&quot;,&quot;3eea9e831fefdaa8df35187a204d82edb589a36b170955ac5ca6b88340befaa0&quot;],
+        [&quot;p&quot;,&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;],
+        [&quot;e&quot;,&quot;9e0dfd2177ea9357f0c165ed134a86a3c07449676d8315e12d159932ff428e37&quot;] // Policy ID
+    ]
+}
+</code></pre>
+<h2 id="9091---approval"><a class="header" href="#9091---approval">9091 - Approval</a></h2>
+<p>TODO: description</p>
+<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;xTv+0Vw4fzB3Kt5x6LK9rjnbIG7sL7J1J+nvoA1OmBw4ERa/8xvqQKv4DWkjDpy58cHYrtidnIcYeNsG0ATQ1p5VSlpqb4bw4RS2OpMT7MbTqS5jSTqpOTSSeu2zDc2yF0+VE3GgDydrt5ck5Hx8rdkPkAJ+rLJ4tcAUBo53gMzTBJ/wGMFTTsVK9w6nSq43ERfow3fzoxwUIru9gBbOFoYg+svqPByL/GvIuvjTPPHGzimQxdTqkkmAy+pjSTYE/UJ4rVbmuerdoQAH87cYwWmpcPaF0hbsvV2071DhMJjHFASN0L/1zjRYZheddDZNT9ePyv6tHQ4RczJF4apR8lyUEJp6wECU6/xFy5dXMn0a6VDrPFJ8s9A3dSD+6CkCI1o3wIBlixPDQUDtNN69h1ZMJhDbiirFXsAYy9nkA5LGDYhUw9mdB8NG5friFxthZW1cwWYm/uudUAreOJBtUaNqNLhwfxvgnDjDjUrgOnT+DxRllsnLoshuv0IXwcYp5dYtiD/e30lEefdeZ4CrIfQdZkndpIBfcwBJG0RUNgfOdkVgurhhxuKFp3/oHaW8X+EnIW6EQRR0ut4PQJFglQtjGJjUlZ5yb/IBGvGnVfgGXLThN0hiA5QP78CBWinkEbPL/Z0mOI6bLkVW4Zo+xt4Pntxh2k4PSO5SizuZz7EWkmTt9Jxq+597T7Io6t6m6Kx7ryURN1OPwSGEXdxyRkIOcwxOsD2RILvwxF5h/Mt/Z/oyJ0ylUTTyxkkAbzluhtjlLyC1lzmE6L0U4P9/iK/7TMequnT24Rtt44HggpYP7d9a9dasvCDiZLUvxLGnjKN7RAoxQb1j9zELOl0LKem84/e5vIIeobYaH000FYiup1imxPZJ+Ufd/K6Coxf7YQY7TCqP79xLGteM2saium8WP3IH9yd4R/g7fxFVTt37S/Ys67HHNgmDx6fzb5NOgwTs/Iz8IO4LMiXVZAoJJ5cC+6lwbgNuuSvQ50g67NdY+NLWyVofFY3TJkkx/bXeracUlJrxKJG4jYQhm41z4/UKCFnAf5uq+6aDoWUpyNu2QB4Z+6glYH5IyJz2XgbZBz1zjWb4BCc/tT17J9UCn/B1OIKLFnHl+2tLR0T8/ZN6cwRlA/o3S9vTmNbu5QtvEqXxlE+r9OasCwPXrmV2QdYw8I/h1XzbDFPK54UGJVxy1P3CM0oGtnCibaZdFyslAr/R+l79NHw64ApuEhP7ZNHTFxB2yLfMAcAYf6fuqw0YxJiV78ui1fSue4IUV6+wlPFKBfz/RqTG0zkmZId8NPiPXUCzy7wMvZwcTZFEhZOUijlxLBWMwr3tXYzJHUbWfzHrhwued68SWw0AinUeP3mkREju0uo7ja6pKKFtAhP+VzO9ZqqTA+VDAIlNmvFw4aela8MLbgNCpVDNI3wxj3fb0PpWjmETG1DrDPpkYlpBBBRemFOOhhwcLx4kjNqKr4db1cYN/A5wWe6QXOTPs9EeyrWQXGOIxNgQA0+VJJeynmXGxZ2Vsb+mhj/X7XHyVKOl4yAvx9xqe+kMsDg7Ww9bT2jiIJ0kqOjxZmusa3v/naV7rGjKRbkBE7U4xdsgfb+Z7wIBo0qkSQyMYqDt2L26Nj77pQkCjvitpm0WULl5hTJMCnTxtE8io/C3TsVQ1PaKWYNAJi9W/OcOmgPH1gq+EKmgrgi1sfUk2KXEVALQWncbSZtBAqMLtsH3R0+I//03VbeMFFvWXi7yDfVBE5iCUPcVpPFYSsrTdCHu6f5QMTukIn2xplKsAK6tk7hMfZ+3u9yzlC3M1GCe7PSm+tLlYSOxkB1smmWn/ZLF1dYuoAyGbwGG+wL2J+GpjOO0u5LqZpO202CVhT9hZ178HjvDMYVqR7SIfnVR4mAIkvfvnoMYTJBEKjT9fKJNJCgi?iv=3uD9CK7zc9OTGN8VGyKqtw==&quot;,
+    &quot;created_at&quot;:1694703253,
+    &quot;id&quot;:&quot;728e7aa746d4c207f118576d41908e92788616b86ae9108d3249fced0023168b&quot;,
+    &quot;kind&quot;:9291,
+    &quot;pubkey&quot;:&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;,
+    &quot;sig&quot;:&quot;7d6219e097559ad0b3ac8a5e7529a4f709cf0701d2003cc8ecacb829a3db723c819a0254b012faaddfd67ce690a7437c8cec01c90f94cf76472919e8a31a85ba&quot;,
+    &quot;tags&quot;:[
+        [&quot;p&quot;,&quot;3eea9e831fefdaa8df35187a204d82edb589a36b170955ac5ca6b88340befaa0&quot;],
+        [&quot;p&quot;,&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;],
+        [&quot;e&quot;,&quot;e64282e3491ebf5de5ca499bd211d5a26d1636d3197f7341d6eef804ed0a61b0&quot;], // Proposal ID
+        [&quot;e&quot;,&quot;9e0dfd2177ea9357f0c165ed134a86a3c07449676d8315e12d159932ff428e37&quot;], // Policy ID
+        [&quot;expiration&quot;,&quot;1695308053&quot;]
+    ]
+}
+</code></pre>
+<h2 id="9092---completed-proposal"><a class="header" href="#9092---completed-proposal">9092 - Completed proposal</a></h2>
+<p>TODO: description</p>
+<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;vMg2YFd3xXhNbLt+IK81FoBfvztBSLjEEiXzeTrYDrhOGmjhmNorLCl8JsRdjjMl1mULdX6UGmu1bQq3EY2v/HNLiiHfb/TU1LhD+XOXvRBUCQToEguarQcknVqVSry7GzIH+J0z6aT/DbYzMpWeA3g6q3HMBs6sj5QfBb6DokUKbFadq74CDnHoEgQ9qhcJaL3qZXL5g01J47u1ceHW+G6/iTEH+TFBKw4iQhdzFH+GyMugow3EmSvuPiiVFr+ZI6iAo14DqqjKKC41XW5wnFeZ2TZTbTHDqnTQrguvfULCpP7p7yOFKlnTUzd0Mgw41xB7FUFCkAmIpZaMNQErCIp0/PTtBZheUM9GHFvuJO3gmZ2B4b4HlbFEpNQ5S8+aYxIOaawLYKbdV7CNjE/hwB2ZQbDLB/UcQ8mbYzkEh6z2bARTCKoiqpNhIyj+OjZbkYjFm/J0ZDAOc8kSyuSqOXGyrtbL669ZBSRXxDkagBmX2lFJ3FZmDsWUbWDtY6IZsCIZDwncVH/P+hU1zUAh+vvdHtt4TSJ+4Iclg1sv9c/Rd/esgjlh4SMav/HBsjkGeaiifRP+rDq5JYRJZi+7xkna9vak1ClBBJL6NUpx87a3h3D95XcRBQQidJhCAMk0Smil5IOB7iz1H71SsJ88+mVNvw0S6Nxy2qfA3FU9j4Kz7X5+F74dHy4UHbn9GCCjNNCQXyZ8S1A/WtQQCv89Gnv99QcX6wkZtVpJ8dLsGUBzZ78xYkfjagzfj2idAxrlCTWmn7fdkc4ZWEzr6JE7GOnLyrjerfVZzecp5kuTM+7j170rLGgnOpt68MSTC7q68M3AwLW9/0s5iC5tMmZJuLnUvMg6A2ZSLr3IaDIazOgH3EbK3RsZ4AUwTRwiCYwu7LQTsiRMvAIG0wrfe3Ldb9G9qHyo5KgNr1CAb7upip0/HL04aNJISn5qEO/cCNM0nW2S41h+Xr9p6NDngnNPnLXC/r+Y1wSEt2bHuemlzC+BUZxsFG300bEpQMsiYJQFmj2JezmLkwLZSEhIPM7KsZ9HbjfowhAe1wF/hZ1iRDzCjknBu1LZcdQhe5Ptu6T2?iv=C4jXF0j5ldeCO6hv9Zajlg==&quot;,
+    &quot;created_at&quot;:1694705897,
+    &quot;id&quot;:&quot;9a0cce3a14184cbd575ea8ef5f61caa1da830320ab8222902eeaf701bd20677a&quot;,
+    &quot;kind&quot;:9292,
+    &quot;pubkey&quot;:&quot;4639e297633117888df17deed6b3860ff152e9e464690623b6b3d6ae4923ad62&quot;,
+    &quot;sig&quot;:&quot;2fb7a6c956b66c3c189e2e9775483270ab95a82a7578d75390ce3e50a4d7b223cbce31402277c48d9f4565a02fbd933e676474eed81d69e32dce94d175406023&quot;,
+    &quot;tags&quot;:[
+        [&quot;p&quot;,&quot;3eea9e831fefdaa8df35187a204d82edb589a36b170955ac5ca6b88340befaa0&quot;],
+        [&quot;p&quot;,&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;],
+        [&quot;e&quot;,&quot;e534d73109b98a8a2f2627634ab1d0195923dd638b6aa76a63eb7eefa3d59e32&quot;], // Proposal ID
+        [&quot;e&quot;,&quot;9e0dfd2177ea9357f0c165ed134a86a3c07449676d8315e12d159932ff428e37&quot;] // Policy ID
+    ]
+}
+</code></pre>
+<h2 id="9094---signer"><a class="header" href="#9094---signer">9094 - Signer</a></h2>
+<p>TODO: description</p>
+<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;bVTA0YYf0+8CZXZtnBWMFu5YLyJR75YyRgAuiATQIvc2LEqiB9B5ARhypbtP+pGRXrhHGaPeZCzSunsP/sb5MXuXmsofAlzWeEAUcAaZC59z2hC97d2DSwYCQFE89MQTf9wrCPZGGAyfEMG9cnSeBuxldKKL5xOPCLfv4JqRSqdILI08h6leaxKTjZLJOLA+Pno7BZlsHazBuV7ZKwq6uGtsF3Nx2v3be+/210JnIrUFyOmCTqatkaLEHLHzekfTV86lJZTQ7YH7XE+TeQpen4H2ZlaJoeEB/JbR8PuONlVo1tjbWq8gdV0G/7kDs57LIzHW6pPsmyh1CNkokfp1Uw==?iv=UUAnvlWtfnHbj5bqDZomhA==&quot;,
+    &quot;created_at&quot;:1688205807,
+    &quot;id&quot;:&quot;fe1b6712daabae7157b4948d74c53a01f6186c4ecf0619ea147de85fbed8735a&quot;,
+    &quot;kind&quot;:9294,
+    &quot;pubkey&quot;:&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;,
+    &quot;sig&quot;:&quot;65783a7e0e1cff481cfc861413a2485ce3e9c461887c51e6258d9e00023a8c34058239f55f2156e88c6052e3df252bdfbc5bd132ebe6773968621ece5517af41&quot;,
+    &quot;tags&quot;:[]
+}
+</code></pre>
+<h2 id="9095---shared-signer"><a class="header" href="#9095---shared-signer">9095 - Shared signer</a></h2>
+<p>TODO: description</p>
+<h3 id="example-6"><a class="header" href="#example-6">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;LC3wv4bucBHIIQkvR9iNlQbSHlEIRqRnfPM0cDwxYr8NRL57Jq1K6kmUbGPXrviDgYlUiNxxeRYNKqd2OX4vhjojUuUQpSr7B01zSS1nCi7JlJU1BdlNcvwZSN/Qd6cW+fXfBTLebdBVRDAR9N681i0rf1kaRI5v3kcTK/Kgq8YFDun0C85nRjyt1GsfcrH297w9nF1+uG3MXtTXAbh3sDPuEWLFR8MS8OEdjntlgD3VGIiwG+xzFdwwkNosptATp0GEjBQhG3jcccGgG9kUhg==?iv=TwMC14xa7Ux9BK6zyu1Cpw==&quot;,
+    &quot;created_at&quot;:1688207242,
+    &quot;id&quot;:&quot;1220540b6c8f6d5179cafdae93e304a3cc4134a9d958f7c4094dc985347b5a8d&quot;,
+    &quot;kind&quot;:9295,
+    &quot;pubkey&quot;:&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;,
+    &quot;sig&quot;:&quot;e3df3184440dcbdb31f9dc13071e59375480f3f744b25586601d8f646edaf66e8f13699e46ae04683e6a6b26ffbf9a392f1cfee352d4cd13dba223650e63ba52&quot;,
+    &quot;tags&quot;:[
+        [&quot;e&quot;,&quot;fe1b6712daabae7157b4948d74c53a01f6186c4ecf0619ea147de85fbed8735a&quot;], // Signer ID
+        [&quot;p&quot;,&quot;3eea9e831fefdaa8df35187a204d82edb589a36b170955ac5ca6b88340befaa0&quot;]
+    ]
+}
+</code></pre>
+<h2 id="32121---label"><a class="header" href="#32121---label">32121 - Label</a></h2>
+<p>TODO: description</p>
+<h3 id="example-7"><a class="header" href="#example-7">Example</a></h3>
+<pre><code class="language-json">{
+    &quot;content&quot;:&quot;8pIsvOkUvh2necC9kQuRjDMRyDZPDzvigt/cy7RY+690KUwqT/IluT7+yezIO5i2EG9EyizVFGOn35unILaF3tiquGACLvFy39pSwdZCLdNWQcPWFFn/BPLBW/9j9RJy3UqBr9YHdPABDo4nsdd1Ww==?iv=hl9l3SiUiHss58o4oxi8Dg==&quot;,
+    &quot;created_at&quot;:1694864773,
+    &quot;id&quot;:&quot;1fd6cbd917c1e2ed2b0b3d18755460e49fbdb1ae46301e68c77747bbbf542244&quot;,
+    &quot;kind&quot;:32121,
+    &quot;pubkey&quot;:&quot;4639e297633117888df17deed6b3860ff152e9e464690623b6b3d6ae4923ad62&quot;,
+    &quot;sig&quot;:&quot;d88ef25b04104a46d2568084fe268a10518fcb8c1c85999d462389f067ac79ccaec285b84cb2600fedfae04650fd12cdbe070f4b167ca7acd0bc86f4ecb83daa&quot;,
+    &quot;tags&quot;:[
+        [&quot;p&quot;,&quot;3eea9e831fefdaa8df35187a204d82edb589a36b170955ac5ca6b88340befaa0&quot;],
+        [&quot;p&quot;,&quot;f831caf722214748c72db4829986bd0cbb2bb8b3aeade1c959624a52a9629046&quot;],
+        [&quot;d&quot;,&quot;1f7db84fdf986cea2fa1d70f2120ad85&quot;], // Unique ID
+        [&quot;e&quot;,&quot;9e0dfd2177ea9357f0c165ed134a86a3c07449676d8315e12d159932ff428e37&quot;] // Policy ID
+    ]
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../js-sdk/installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../miniscript-templates/m-of-n.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../js-sdk/installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../miniscript-templates/m-of-n.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Signers - Smart Vaults Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">SDKs</li><li class="chapter-item expanded "><a href="../rust-sdk/01-getting-started.html"><strong aria-hidden="true">1.</strong> Rust SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/02-installation.html"><strong aria-hidden="true">1.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../rust-sdk/03-features.html"><strong aria-hidden="true">1.2.</strong> Features</a></li><li class="chapter-item expanded "><a href="../rust-sdk/04-constructors.html"><strong aria-hidden="true">1.3.</strong> Constructors</a></li><li class="chapter-item expanded "><a href="../rust-sdk/05-configs-and-relays.html"><strong aria-hidden="true">1.4.</strong> Configs & Relays</a></li><li class="chapter-item expanded "><a href="../rust-sdk/06-profile-and-contacts.html"><strong aria-hidden="true">1.5.</strong> Profile & Contacts</a></li><li class="chapter-item expanded "><a href="../rust-sdk/07-signers.html" class="active"><strong aria-hidden="true">1.6.</strong> Signers</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/01-index.html"><strong aria-hidden="true">1.7.</strong> Policies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/02-templates.html"><strong aria-hidden="true">1.7.1.</strong> Templates</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/03-custom-policies.html"><strong aria-hidden="true">1.7.2.</strong> Custom policies</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/04-funding.html"><strong aria-hidden="true">1.7.3.</strong> Funding</a></li></ol></li><li class="chapter-item expanded "><a href="../rust-sdk/09-proposals.html"><strong aria-hidden="true">1.8.</strong> Proposals</a></li><li class="chapter-item expanded "><a href="../rust-sdk/10-connect.html"><strong aria-hidden="true">1.9.</strong> Connect</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/01-index.html"><strong aria-hidden="true">1.10.</strong> Keychain</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/keychain/02-change-password.html"><strong aria-hidden="true">1.10.1.</strong> Change password</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/03-secrets.html"><strong aria-hidden="true">1.10.2.</strong> Secrets</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/04-wipe.html"><strong aria-hidden="true">1.10.3.</strong> Wipe</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../js-sdk/getting-started.html"><strong aria-hidden="true">2.</strong> JavaScript SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js-sdk/installation.html"><strong aria-hidden="true">2.1.</strong> Installation</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Nostr Specs</li><li class="chapter-item expanded "><a href="../kinds/index.html"><strong aria-hidden="true">3.</strong> Event Kinds</a></li><li class="chapter-item expanded affix "><li class="part-title">Miniscript Templates</li><li class="chapter-item expanded "><a href="../miniscript-templates/m-of-n.html"><strong aria-hidden="true">4.</strong> Collaborative Custody</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/hold.html"><strong aria-hidden="true">5.</strong> Hodl Lock</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/inheritance.html"><strong aria-hidden="true">6.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/social-recovery.html"><strong aria-hidden="true">7.</strong> Social Recovery</a></li><li class="chapter-item expanded affix "><li class="part-title">About</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Smart Vaults Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/smartvaults/book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/smartvaults/book/edit/master/src/rust-sdk/07-signers.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="signers"><a class="header" href="#signers">Signers</a></h1>
+<p>Signers are descriptors that you can share with contacts (or with other users) to simplify the
+process of policies creation.</p>
+<h2 id="the-smartvaults-signer"><a class="header" href="#the-smartvaults-signer">The SmartVaults signer</a></h2>
+<p>The <code>SmartVaults</code> signer it's derived from your local seed.
+It's use the following derivation path: <code>m/86'/&lt;coin&gt;'/784923'</code> (the <code>coin</code> depends on the selected <code>network</code>)</p>
+<pre><pre class="playground"><code class="language-rust no_run"><span class="boring">use smartvaults_sdk::prelude::*;
+</span><span class="boring">
+</span><span class="boring">#[tokio::main]
+</span><span class="boring">async fn main() {
+</span>let client = ...; // The client that you before constructed
+
+// Save the SmartVaults signer (if not exists)
+client.save_smartvaults_signer().await?;
+<span class="boring">}</span></code></pre></pre>
+<h2 id="external-signers"><a class="header" href="#external-signers">External signers</a></h2>
+<p>You can save external signers (like <code>AirGap</code> devices).</p>
+<pre><pre class="playground"><code class="language-rust no_run">use std::str::FromStr;
+
+<span class="boring">use smartvaults_sdk::prelude::*;
+</span><span class="boring">
+</span><span class="boring">#[tokio::main]
+</span><span class="boring">async fn main() {
+</span>let client = ...; // The client that you before constructed
+
+let fingerprint = Fingerprint::from_str(&quot;7356e457&quot;)?;
+let descriptor: Descriptor&lt;DescriptorPublicKey&gt; = Descriptor::from_str(&quot;[7356e457/86'/1'/784923']tpubDCvLwbJPseNux9EtPbrbA2tgDayzptK4HNkky14Cw6msjHuqyZCE88miedZD86TZUb29Rof3sgtREU4wtzofte7QDSWDiw8ZU6ZYHmAxY9d/0/*&quot;)?;
+let signer = Signer::airgap(&quot;Coldcard&quot;, &quot;Description&quot;, fingerprint, descriptor)?;
+client.save_signer(signer).await?;
+<span class="boring">}</span></code></pre></pre>
+<p>Note: <strong>only</strong> <code>taproot</code> descriptors are supported</p>
+<h2 id="share-a-signer"><a class="header" href="#share-a-signer">Share a signer</a></h2>
+<pre><pre class="playground"><code class="language-rust no_run"><span class="boring">use smartvaults_sdk::prelude::*;
+</span><span class="boring">
+</span><span class="boring">#[tokio::main]
+</span><span class="boring">async fn main() {
+</span>let client = ...; // The client that you before constructed
+
+// Get my signers
+let signers: Vec&lt;GetSigner&gt; = client.get_signers().await?;
+
+// Get the first signer
+let signer_id = signers.first().unwrap().signer_id;
+
+// Public key of the user to share the signer
+let public_key: XOnlyPublicKey = ...;
+
+// Share
+client.share_signer(signer_id, public_key).await?;
+<span class="boring">}</span></code></pre></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../rust-sdk/06-profile-and-contacts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../rust-sdk/08-policies/01-index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../rust-sdk/06-profile-and-contacts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../rust-sdk/08-policies/01-index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,9 +1,16 @@
 # Kinds
 
+In the current protocol (`v1`) all objects (`shared keys`, `vaults`, `proposals`, ...) are encrypted using [NIP04](https://github.com/nostr-protocol/nips/blob/master/04.md).
+
 ## 9288 - Shared Key
 
 This kind it's used to share shared keys between participants of a `vault`. 
 It's used to encrypt and decrypt everything related to a `vault`.
+
+### Required tags
+
+* `e`: event ID of the `vault`
+* `p`: public key of the user able to decrypt the content of this event
 
 ### Example 
 
@@ -26,6 +33,10 @@ It's used to encrypt and decrypt everything related to a `vault`.
 
 TODO: description
 
+### Required tags
+
+* `p`: public keys of the users involved in the `vault`
+
 ### Example
 
 ```json
@@ -46,6 +57,11 @@ TODO: description
 ## 9090 - Proposal
 
 TODO: description
+
+### Required tags
+
+* `e`: event ID of the `vault`
+* `p`: public keys of the users involved in the `vault`
 
 ### Example
 
@@ -68,6 +84,15 @@ TODO: description
 ## 9091 - Approval
 
 TODO: description
+
+### Required tags
+
+* `e`: event ID of the `vault` and the `proposal`
+* `p`: public keys of the users involved in the `vault`
+
+### Optional tags
+
+* `expiration`: UNIX timestamp of the expiration of the approval
 
 ### Example
 
@@ -92,6 +117,11 @@ TODO: description
 ## 9092 - Completed proposal
 
 TODO: description
+
+### Required tags
+
+* `e`: event ID of the `vault` and the `proposal`
+* `p`: public keys of the users involved in the `vault`
 
 ### Example
 
@@ -134,6 +164,11 @@ TODO: description
 
 TODO: description
 
+### Required tags
+
+* `e`: event ID of the `signer`
+* `p`: public key of the user to you are sharing signer to
+
 ### Example
 
 ```json
@@ -154,6 +189,12 @@ TODO: description
 ## 32121 - Label
 
 TODO: description
+
+### Required tags
+
+* `e`: event ID of the `vault`
+* `d`: unique ID of the `label`
+* `p`: public keys of the users involved in the `vault`
 
 ### Example
 

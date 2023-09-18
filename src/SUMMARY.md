@@ -22,8 +22,10 @@
         * [Secrets](./rust-sdk/keychain/03-secrets.md)
         * [Wipe](./rust-sdk/keychain/04-wipe.md)
 
-- [JavaScript SDK](./js-sdk/getting-started.md)
-    * [Installation](./js-sdk/installation.md)
+- [JavaScript SDK](./js-sdk/01-getting-started.md)
+    * [contacts and profiles](./js-sdk/02-contacts-and-profiles.md)
+    * [signers](./js-sdk/03-signers.md)
+    * [creating a vault](./js-sdk/04-creating-a-vault.md)
 
 # Nostr Specs
 - [Event Kinds](./kinds/index.md)

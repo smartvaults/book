@@ -39,6 +39,18 @@ TODO: description
 
 ### Example
 
+Unencrypted content:
+
+```json
+{
+    "description":"Vault description",
+    "descriptor":"tr(...)",
+    "name":"Vault name"
+}
+```
+
+Event: 
+
 ```json
 {
     "content":"uTK3M5F958K1HKEJf/8ciVNLVw0u6dwkSANxWGBkZvpM3/3kIR/miLUPGuYLskl8ttBcLRXU07fq1mhC0+PsppJo5PQ3XyWFGWGWOQXktOKPIhpQcbpX6xCZACKN9BP6x1kCt8RCJB8nwqx0mD21syZRoQdOqKXWR/1r4rqknMS4uPY3nwT15vkP0p6zP6ZD4m9ykBhiRhGiUYxdakMcKcfHt1R22OF0trCt1+KpL9cdVqHpiiJy9hofgKb7wqPFnwcoRVlariXoQIIOoZHzOS69rzmqLFAyz6PWl2ifSwhDX9VCMw6vzp8Trp0lO/txhGW6+mIn9DBebj0cJQCygUaUmpzyBXOAzuzndUDPHMsls12qeOfX64edLgGyC/jL7qG9HS6Z1Wo91jlpqwTmqY3yzMGGcMZ01VkJ0jmbB8OuuO/BfrU3YMLQMAXMyc8BVyyksNIrG9tEMJlGDe4w1Wl2Ss7jiZRqLzuJua7w0RpApAmQ8zAsaDojVOEES87/pG+Pl6EyQxnofMMmdi1A+LSBQBAjtglGdKaK740I6Cjc2acBwqohiM8CV+tbTCqn?iv=fPuKqXaCoczpZ/3eikrTbQ==",
@@ -64,6 +76,22 @@ TODO: description
 * `p`: public keys of the users involved in the `vault`
 
 ### Example
+
+Unencrypted content:
+
+```json
+{
+    "Spending": {
+        "amount":1928,
+        "description":"Proposal description",
+        "descriptor":"policy-descriptor",
+        "psbt":"base64-psbt",
+        "to_address":"mohjSavDdQYHRYXcS3uS6ttaHP8amyvX78"
+    }
+}
+```
+
+Event:
 
 ```json
 {
@@ -96,6 +124,18 @@ TODO: description
 
 ### Example
 
+Unencrypted content:
+
+```json
+{
+    "Spending":{
+        "psbt":"base64-psbt"
+    }
+}
+```
+
+Event:
+
 ```json
 {
     "content":"xTv+0Vw4fzB3Kt5x6LK9rjnbIG7sL7J1J+nvoA1OmBw4ERa/8xvqQKv4DWkjDpy58cHYrtidnIcYeNsG0ATQ1p5VSlpqb4bw4RS2OpMT7MbTqS5jSTqpOTSSeu2zDc2yF0+VE3GgDydrt5ck5Hx8rdkPkAJ+rLJ4tcAUBo53gMzTBJ/wGMFTTsVK9w6nSq43ERfow3fzoxwUIru9gBbOFoYg+svqPByL/GvIuvjTPPHGzimQxdTqkkmAy+pjSTYE/UJ4rVbmuerdoQAH87cYwWmpcPaF0hbsvV2071DhMJjHFASN0L/1zjRYZheddDZNT9ePyv6tHQ4RczJF4apR8lyUEJp6wECU6/xFy5dXMn0a6VDrPFJ8s9A3dSD+6CkCI1o3wIBlixPDQUDtNN69h1ZMJhDbiirFXsAYy9nkA5LGDYhUw9mdB8NG5friFxthZW1cwWYm/uudUAreOJBtUaNqNLhwfxvgnDjDjUrgOnT+DxRllsnLoshuv0IXwcYp5dYtiD/e30lEefdeZ4CrIfQdZkndpIBfcwBJG0RUNgfOdkVgurhhxuKFp3/oHaW8X+EnIW6EQRR0ut4PQJFglQtjGJjUlZ5yb/IBGvGnVfgGXLThN0hiA5QP78CBWinkEbPL/Z0mOI6bLkVW4Zo+xt4Pntxh2k4PSO5SizuZz7EWkmTt9Jxq+597T7Io6t6m6Kx7ryURN1OPwSGEXdxyRkIOcwxOsD2RILvwxF5h/Mt/Z/oyJ0ylUTTyxkkAbzluhtjlLyC1lzmE6L0U4P9/iK/7TMequnT24Rtt44HggpYP7d9a9dasvCDiZLUvxLGnjKN7RAoxQb1j9zELOl0LKem84/e5vIIeobYaH000FYiup1imxPZJ+Ufd/K6Coxf7YQY7TCqP79xLGteM2saium8WP3IH9yd4R/g7fxFVTt37S/Ys67HHNgmDx6fzb5NOgwTs/Iz8IO4LMiXVZAoJJ5cC+6lwbgNuuSvQ50g67NdY+NLWyVofFY3TJkkx/bXeracUlJrxKJG4jYQhm41z4/UKCFnAf5uq+6aDoWUpyNu2QB4Z+6glYH5IyJz2XgbZBz1zjWb4BCc/tT17J9UCn/B1OIKLFnHl+2tLR0T8/ZN6cwRlA/o3S9vTmNbu5QtvEqXxlE+r9OasCwPXrmV2QdYw8I/h1XzbDFPK54UGJVxy1P3CM0oGtnCibaZdFyslAr/R+l79NHw64ApuEhP7ZNHTFxB2yLfMAcAYf6fuqw0YxJiV78ui1fSue4IUV6+wlPFKBfz/RqTG0zkmZId8NPiPXUCzy7wMvZwcTZFEhZOUijlxLBWMwr3tXYzJHUbWfzHrhwued68SWw0AinUeP3mkREju0uo7ja6pKKFtAhP+VzO9ZqqTA+VDAIlNmvFw4aela8MLbgNCpVDNI3wxj3fb0PpWjmETG1DrDPpkYlpBBBRemFOOhhwcLx4kjNqKr4db1cYN/A5wWe6QXOTPs9EeyrWQXGOIxNgQA0+VJJeynmXGxZ2Vsb+mhj/X7XHyVKOl4yAvx9xqe+kMsDg7Ww9bT2jiIJ0kqOjxZmusa3v/naV7rGjKRbkBE7U4xdsgfb+Z7wIBo0qkSQyMYqDt2L26Nj77pQkCjvitpm0WULl5hTJMCnTxtE8io/C3TsVQ1PaKWYNAJi9W/OcOmgPH1gq+EKmgrgi1sfUk2KXEVALQWncbSZtBAqMLtsH3R0+I//03VbeMFFvWXi7yDfVBE5iCUPcVpPFYSsrTdCHu6f5QMTukIn2xplKsAK6tk7hMfZ+3u9yzlC3M1GCe7PSm+tLlYSOxkB1smmWn/ZLF1dYuoAyGbwGG+wL2J+GpjOO0u5LqZpO202CVhT9hZ178HjvDMYVqR7SIfnVR4mAIkvfvnoMYTJBEKjT9fKJNJCgi?iv=3uD9CK7zc9OTGN8VGyKqtw==",
@@ -125,6 +165,45 @@ TODO: description
 
 ### Example
 
+Unencrypted content:
+
+```json
+{
+    "Spending":{
+        "description":"Proposal description",
+        "tx":{
+            "input":[
+                {
+                    "previous_output":"57bd3e5dce42855346698ed6afc5acb65746abfda56e93db11ffa8be3677f612:1",
+                    "script_sig":"",
+                    "sequence":4294967293,
+                    "witness":[
+                        "6cb594a167ba0266f8e7a0d774089da0d6b0213f9838667edf3c65bfa232c2c0b2c11f71902d17343faea56ac1f48299b35095f6d8967b6881d0741029e18216",
+                        "e0b5eacc5044729bfbc79bbc3ca79f3f9c355400334d4a9b5890353d3f9027f8cc91233f677bf049e75d7ba3ae3499186c61f5b7521460f28119e078222d63a1",
+                        "209125b5661a3388ab58218ef1f7fa6530fcc1fc450fd2bc2465f020037655bc5fac206cdbe7b03576c53da1deccd58f0605406d270df70bf925bafc9553672148e997ba529c",
+                        "c00202020202020202020202020202020202020202020202020202020202020202"
+                    ]
+                }
+            ],
+            "lock_time":2502480,
+            "output":[
+                {
+                    "script_pubkey":"76a91459cada50314c829e19f5a7786f8ee0d4987f429d88ac",
+                    "value":1896
+                },
+                {
+                    "script_pubkey":"5120045a52300c0628547fd851543dc9a0fc653b75bd7136d326a736a649251838f7",
+                    "value":5594
+                }
+            ],
+            "version":1
+        }
+    }
+}
+```
+
+Event:
+
 ```json
 {
     "content":"vMg2YFd3xXhNbLt+IK81FoBfvztBSLjEEiXzeTrYDrhOGmjhmNorLCl8JsRdjjMl1mULdX6UGmu1bQq3EY2v/HNLiiHfb/TU1LhD+XOXvRBUCQToEguarQcknVqVSry7GzIH+J0z6aT/DbYzMpWeA3g6q3HMBs6sj5QfBb6DokUKbFadq74CDnHoEgQ9qhcJaL3qZXL5g01J47u1ceHW+G6/iTEH+TFBKw4iQhdzFH+GyMugow3EmSvuPiiVFr+ZI6iAo14DqqjKKC41XW5wnFeZ2TZTbTHDqnTQrguvfULCpP7p7yOFKlnTUzd0Mgw41xB7FUFCkAmIpZaMNQErCIp0/PTtBZheUM9GHFvuJO3gmZ2B4b4HlbFEpNQ5S8+aYxIOaawLYKbdV7CNjE/hwB2ZQbDLB/UcQ8mbYzkEh6z2bARTCKoiqpNhIyj+OjZbkYjFm/J0ZDAOc8kSyuSqOXGyrtbL669ZBSRXxDkagBmX2lFJ3FZmDsWUbWDtY6IZsCIZDwncVH/P+hU1zUAh+vvdHtt4TSJ+4Iclg1sv9c/Rd/esgjlh4SMav/HBsjkGeaiifRP+rDq5JYRJZi+7xkna9vak1ClBBJL6NUpx87a3h3D95XcRBQQidJhCAMk0Smil5IOB7iz1H71SsJ88+mVNvw0S6Nxy2qfA3FU9j4Kz7X5+F74dHy4UHbn9GCCjNNCQXyZ8S1A/WtQQCv89Gnv99QcX6wkZtVpJ8dLsGUBzZ78xYkfjagzfj2idAxrlCTWmn7fdkc4ZWEzr6JE7GOnLyrjerfVZzecp5kuTM+7j170rLGgnOpt68MSTC7q68M3AwLW9/0s5iC5tMmZJuLnUvMg6A2ZSLr3IaDIazOgH3EbK3RsZ4AUwTRwiCYwu7LQTsiRMvAIG0wrfe3Ldb9G9qHyo5KgNr1CAb7upip0/HL04aNJISn5qEO/cCNM0nW2S41h+Xr9p6NDngnNPnLXC/r+Y1wSEt2bHuemlzC+BUZxsFG300bEpQMsiYJQFmj2JezmLkwLZSEhIPM7KsZ9HbjfowhAe1wF/hZ1iRDzCjknBu1LZcdQhe5Ptu6T2?iv=C4jXF0j5ldeCO6hv9Zajlg==",
@@ -148,6 +227,20 @@ TODO: description
 
 ### Example
 
+Unencrypted content:
+
+```json
+{
+    "description":null,
+    "descriptor":"descriptor",
+    "fingerprint":"417a110f",
+    "name":"Signer name",
+    "t":"AirGap"
+}
+```
+
+Event:
+
 ```json
 {
     "content":"bVTA0YYf0+8CZXZtnBWMFu5YLyJR75YyRgAuiATQIvc2LEqiB9B5ARhypbtP+pGRXrhHGaPeZCzSunsP/sb5MXuXmsofAlzWeEAUcAaZC59z2hC97d2DSwYCQFE89MQTf9wrCPZGGAyfEMG9cnSeBuxldKKL5xOPCLfv4JqRSqdILI08h6leaxKTjZLJOLA+Pno7BZlsHazBuV7ZKwq6uGtsF3Nx2v3be+/210JnIrUFyOmCTqatkaLEHLHzekfTV86lJZTQ7YH7XE+TeQpen4H2ZlaJoeEB/JbR8PuONlVo1tjbWq8gdV0G/7kDs57LIzHW6pPsmyh1CNkokfp1Uw==?iv=UUAnvlWtfnHbj5bqDZomhA==",
@@ -170,6 +263,17 @@ TODO: description
 * `p`: public key of the user to you are sharing signer to
 
 ### Example
+
+Unencrypted content:
+
+```json
+{
+    "descriptor":"tr(...)",
+    "fingerprint":"00000000"
+}
+```
+
+Event:
 
 ```json
 {
@@ -197,6 +301,19 @@ TODO: description
 * `p`: public keys of the users involved in the `vault`
 
 ### Example
+
+Unencrypted content:
+
+```json
+{
+    "data":{
+        "address":"tb1p..."
+    },
+    "text":"Label"
+}
+```
+
+Event:
 
 ```json
 {

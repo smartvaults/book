@@ -32,17 +32,23 @@ import {
 3. `nostrClient`: An instance of NostrClient for interacting with Nostr relays
 
 ```javascript
+// Define the authenticator
 const myKeys = new Keys()
 const authenticator = new DirectPrivateKeyAuthenticator(myKeys.privateKey)
+
+// Define the bitcoin utility functions
+const ENDPONIT = 'https://mempool.space/testnet/api'
+const NETWORK = 'testnet'
+const STOP_GAP = 20 // Stop searching addreses for transactions after this number of consecutive addresses with no transactions is found
 const bitcoinUtil = {
-        walletSyncTimeGap: 3, 
+        walletSyncTimeGap: 3, // Minutes that have to pass after the last sync, to require another sync when performing an operation
         toDescriptor: miniScriptToDescriptor,
         createWallet: (descriptor) => {
           return new Wallet(
             descriptor,
-            'https://mempool.space/testnet/api',
-            'testnet',
-             15
+            ENDPONIT,
+            NETWORK,
+            STOP_GAP
           )
         },
         canFinalizePsbt: (psbts) => canFinalizePsbt(psbts),
@@ -51,6 +57,10 @@ const bitcoinUtil = {
         getPsbtUtxos: (psbt) => getPsbtUtxos(psbt),
         toMiniscript: (descriptor) => descriptorToMiniscript(descriptor)
 }
+
+// Define the Nostr client
 const nostrClient = new NostrClient(['wss://test.relay.report'])
+
+// Initialize SmartVaults
 const smartVaults = new SmartVaults ({authenticator, bitcoinUtil, nostrClient})
 ```

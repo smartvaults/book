@@ -10,6 +10,8 @@ In this section we show how to manage user profiles and contacts.
 4. **Adding or Updating a Contact**
 5. **Fetching Contacts**
 6. **Fetching Contacts with Metadata**
+7. **Fetching Recommended Contacts**
+8. **Removing a Contact**
 
 ------
 
@@ -74,4 +76,20 @@ To fetch contacts along with their profile metadata, you can use the `getContact
 
 ```javascript
 const contactsProfiles = await smartVaults.getContactProfiles();
+```
+
+### Fetching Recommended Contacts
+
+When 'user A' adds 'user B' as a contact, 'user A' is automatically added as a recommended contact for 'user B'. To fetch recommended contacts, use the `getRecommendedContacts` method.
+
+```javascript
+const recommendedContacts = await smartVaults.getRecommendedContacts();
+```
+
+### Removing a Contact
+
+To remove a contact, use the `removeContacts` method.
+
+```javascript
+await smartVaults.removeContacts(contactPubKey);
 ```

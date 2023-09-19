@@ -22,9 +22,16 @@
         * [Secrets](./rust-sdk/keychain/03-secrets.md)
         * [Wipe](./rust-sdk/keychain/04-wipe.md)
 
-- [JavaScript SDK](./js-sdk/getting-started.md)
-    * [Installation](./js-sdk/installation.md)
-
+- [JavaScript SDK](./js-sdk/01-getting-started.md)
+    * [contacts and profiles](./js-sdk/02-contacts-and-profiles.md)
+    * [signers](./js-sdk/03-signers.md)
+    * [vaults](./js-sdk/04-vaults/01-vaults.md)
+      * [creating vaults](./js-sdk/04-vaults/02-creating-a-vault.md)
+    * [proposals](./js-sdk/05-proposals/01-creating-proposals.md)
+        * [creating proposals](./js-sdk/05-proposals/01-creating-proposals.md)
+        * [fetching proposals](./js-sdk/05-proposals/02-fetching-proposals.md)
+        * [approving proposals](./js-sdk/05-proposals/03-approvals.md)
+        * [finalizing proposals](./js-sdk/05-proposals/04-finalizing-a-proposal.md)
 # Nostr Specs
 - [Event Kinds](./kinds/index.md)
 

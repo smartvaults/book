@@ -2,8 +2,18 @@
 
 [Introduction](README.md)
 
-# SDKs
 
+# Miniscript Templates
+- [Decaying Multisig](./miniscript-templates/decaying-multisig.md)
+- [Collaborative Custody](./miniscript-templates/m-of-n.md)
+- [Hodl Lock](./miniscript-templates/hold.md)
+- [Inheritance](./miniscript-templates/inheritance.md)
+- [Social Recovery](./miniscript-templates/social-recovery.md)
+
+# Nostr Specs
+- [Event Kinds](./kinds/index.md)
+
+# SDKs
 - [Rust SDK](./rust-sdk/01-getting-started.md)
     * [Installation](./rust-sdk/02-installation.md)
     * [Features](./rust-sdk/03-features.md)
@@ -32,14 +42,7 @@
         * [fetching proposals](./js-sdk/05-proposals/02-fetching-proposals.md)
         * [approving proposals](./js-sdk/05-proposals/03-approvals.md)
         * [finalizing proposals](./js-sdk/05-proposals/04-finalizing-a-proposal.md)
-# Nostr Specs
-- [Event Kinds](./kinds/index.md)
 
-# Miniscript Templates
-- [Collaborative Custody](./miniscript-templates/m-of-n.md)
-- [Hodl Lock](./miniscript-templates/hold.md)
-- [Inheritance](./miniscript-templates/inheritance.md)
-- [Social Recovery](./miniscript-templates/social-recovery.md)
 
 
 # About

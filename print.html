@@ -206,7 +206,14 @@
     after(lock_time_1),
     after(lock_time_2),
     ...
-    )
+)
+</code></pre>
+<h2 id="output-descriptor"><a class="header" href="#output-descriptor">Output Descriptor</a></h2>
+<pre><code>tr(InternalKey,thresh(3,pk(K1),s:pk(K2),s:pk(K3),snl:after(B1),snl:after(B2)))
+</code></pre>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<p>Example Output Descriptor</p>
+<pre><code>tr(3ec243044db203bc418092014b46bfe9494a1c16ee66160e385d7dd676e378cd,thresh(3,pk([7356e457/86'/1'/784923']tpubDCvLwbJPseNux9EtPbrbA2tgDayzptK4HNkky14Cw6msjHuqyZCE88miedZD86TZUb29Rof3sgtREU4wtzofte7QDSWDiw8ZU6ZYHmAxY9d/0/*),s:pk([4eb5d5a1/86'/1'/784923']tpubDCLskGdzStPPo1auRQygJUfbmLMwujWr7fmekdUMD7gqSpwEcRso4CfiP5GkRqfXFYkfqTujyvuehb7inymMhBJFdbJqFyHsHVRuwLKCSe9/0/*),s:pk([f3ab64d8/86'/1'/784923']tpubDCh4uyVDVretfgTNkazUarV9ESTh7DJy8yvMSuWn5PQFbTDEsJwHGSBvTrNF92kw3x5ZLFXw91gN5LYtuSCbr1Vo6mzQmD49sF2vGpReZp2/0/*),snl:after(1721743844),snl:after(1747663844)))#p0skyz4j
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="m-of-n-template"><a class="header" href="#m-of-n-template">M-of-N Template</a></h1>
 <ul>
@@ -242,7 +249,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>vault</code></li>
 <li><code>p</code>: public key of the user able to decrypt the content of this event</li>
 </ul>
-<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
 <pre><code class="language-json">{
     &quot;content&quot;:&quot;PDj1bNB1PuWKzPc1RrKBmbEeXDaYkxRIsAqTraJscUq4ML3+mZzJq4O6vPkkIJeZuNQTp0EyLxAvUblXCgJxaEgwxRWQC+rpdz3ILjdQA2w=?iv=B5KnzXU7smmAWevhTi1rSg==&quot;,
     &quot;created_at&quot;:1693903672,
@@ -262,7 +269,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <ul>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;description&quot;:&quot;Vault description&quot;,
@@ -291,7 +298,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>vault</code></li>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;Spending&quot;: {
@@ -329,7 +336,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <ul>
 <li><code>expiration</code>: UNIX timestamp of the expiration of the approval</li>
 </ul>
-<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
+<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;Spending&quot;:{
@@ -361,7 +368,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>vault</code> and the <code>proposal</code></li>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
+<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;Spending&quot;:{
@@ -414,7 +421,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 </code></pre>
 <h2 id="9094---signer"><a class="header" href="#9094---signer">9094 - Signer</a></h2>
 <p>TODO: description</p>
-<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
+<h3 id="example-6"><a class="header" href="#example-6">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;description&quot;:null,
@@ -442,7 +449,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>signer</code></li>
 <li><code>p</code>: public key of the user to you are sharing signer to</li>
 </ul>
-<h3 id="example-6"><a class="header" href="#example-6">Example</a></h3>
+<h3 id="example-7"><a class="header" href="#example-7">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;descriptor&quot;:&quot;tr(...)&quot;,
@@ -471,7 +478,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>d</code>: unique ID of the <code>label</code></li>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-7"><a class="header" href="#example-7">Example</a></h3>
+<h3 id="example-8"><a class="header" href="#example-8">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;data&quot;:{

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         
         <meta name="description" content="Description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="../favicon.svg">
         <link rel="shortcut icon" href="../favicon.png">
@@ -31,7 +31,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -61,24 +61,29 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -116,9 +121,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -197,7 +202,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9289---vault"><a class="header" href="#9289---vault">9289 - Vault</a></h2>
-<p>TODO: description</p>
 <h3 id="required-tags-1"><a class="header" href="#required-tags-1">Required tags</a></h3>
 <ul>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
@@ -225,7 +229,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9090---proposal"><a class="header" href="#9090---proposal">9090 - Proposal</a></h2>
-<p>TODO: description</p>
 <h3 id="required-tags-2"><a class="header" href="#required-tags-2">Required tags</a></h3>
 <ul>
 <li><code>e</code>: event ID of the <code>vault</code></li>
@@ -259,7 +262,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9091---approval"><a class="header" href="#9091---approval">9091 - Approval</a></h2>
-<p>TODO: description</p>
 <h3 id="required-tags-3"><a class="header" href="#required-tags-3">Required tags</a></h3>
 <ul>
 <li><code>e</code>: event ID of the <code>vault</code> and the <code>proposal</code></li>
@@ -295,7 +297,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9092---completed-proposal"><a class="header" href="#9092---completed-proposal">9092 - Completed proposal</a></h2>
-<p>TODO: description</p>
 <h3 id="required-tags-4"><a class="header" href="#required-tags-4">Required tags</a></h3>
 <ul>
 <li><code>e</code>: event ID of the <code>vault</code> and the <code>proposal</code></li>
@@ -353,7 +354,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9094---signer"><a class="header" href="#9094---signer">9094 - Signer</a></h2>
-<p>TODO: description</p>
 <h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
@@ -376,7 +376,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9095---shared-signer"><a class="header" href="#9095---shared-signer">9095 - Shared signer</a></h2>
-<p>TODO: description</p>
 <h3 id="required-tags-5"><a class="header" href="#required-tags-5">Required tags</a></h3>
 <ul>
 <li><code>e</code>: event ID of the <code>signer</code></li>
@@ -404,7 +403,6 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="32121---label"><a class="header" href="#32121---label">32121 - Label</a></h2>
-<p>TODO: description</p>
 <h3 id="required-tags-6"><a class="header" href="#required-tags-6">Required tags</a></h3>
 <ul>
 <li><code>e</code>: event ID of the <code>vault</code></li>
@@ -445,7 +443,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../rust-sdk/01-getting-started.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../rust-sdk/01-getting-started.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -459,7 +457,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../rust-sdk/01-getting-started.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../rust-sdk/01-getting-started.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

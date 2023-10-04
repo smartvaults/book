@@ -31,8 +31,6 @@ It's used to encrypt and decrypt everything related to a `vault`.
 
 ## 9289 - Vault
 
-TODO: description
-
 ### Required tags
 
 * `p`: public keys of the users involved in the `vault`
@@ -67,8 +65,6 @@ Event:
 ```
 
 ## 9090 - Proposal
-
-TODO: description
 
 ### Required tags
 
@@ -110,8 +106,6 @@ Event:
 ```
 
 ## 9091 - Approval
-
-TODO: description
 
 ### Required tags
 
@@ -155,8 +149,6 @@ Event:
 ```
 
 ## 9092 - Completed proposal
-
-TODO: description
 
 ### Required tags
 
@@ -223,8 +215,6 @@ Event:
 
 ## 9094 - Signer
 
-TODO: description
-
 ### Example
 
 Unencrypted content:
@@ -254,8 +244,6 @@ Event:
 ```
 
 ## 9095 - Shared signer
-
-TODO: description
 
 ### Required tags
 
@@ -291,8 +279,6 @@ Event:
 ```
 
 ## 32121 - Label
-
-TODO: description
 
 ### Required tags
 

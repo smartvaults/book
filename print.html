@@ -191,7 +191,7 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="decaying-multisig"><a class="header" href="#decaying-multisig">Decaying Multisig</a></h1>
 <h2 id="description"><a class="header" href="#description">Description</a></h2>
 <p>Decaying multisig is a custody technique where the number of keys required to move the funds decreases over time. For example, a 3 of 3 multisig may decay to only need 2 of the 3 keys after 1 year, and then to 1 of the 3 keys after 5 years.</p>
-<p>One use case for this is mitigating against loss of funds due to key loss. If a key is lost, the owner only needs to wait until the next decay step to recover the funds. Another use case is for losening consensus for co-managed assets. For example, a board of directors may generally require a higher threshold (67%) to spend funds, but decrease that over time (to 51%) to avoid allowing a subset of signers to deadlock the funds.</p>
+<p>One use case for this is mitigating against loss of funds due to key loss. If a key is lost, the owner only needs to wait until the next decay step to recover the funds. Another use case is for loosening consensus for co-managed assets. For example, a board of directors may generally require a higher threshold (67%) to spend funds, but decrease that over time (to 51%) to avoid allowing a subset of signers to deadlock the funds.</p>
 <h2 id="vault-configuration-example"><a class="header" href="#vault-configuration-example">Vault Configuration Example</a></h2>
 <p>All 3 signers are needed to spend. After 10,000 blocks, the <code>after</code> block meets one of the threshold's conditions, so only 2 signatures are needed to unlock the funds. Finally, after 20,000 blocks, 2 conditions are met by the <code>after</code> statements and only 1 additional signature is needed.
 <img src="https://github.com/smartvaults/smartvaults/assets/32852271/199630b1-8812-45ce-9d44-6f2a35e030e6" alt="image" /></p>
@@ -220,18 +220,38 @@
 <p>Example Output Descriptor</p>
 <pre><code>tr(3ec243044db203bc418092014b46bfe9494a1c16ee66160e385d7dd676e378cd,thresh(3,pk([7356e457/86'/1'/784923']tpubDCvLwbJPseNux9EtPbrbA2tgDayzptK4HNkky14Cw6msjHuqyZCE88miedZD86TZUb29Rof3sgtREU4wtzofte7QDSWDiw8ZU6ZYHmAxY9d/0/*),s:pk([4eb5d5a1/86'/1'/784923']tpubDCLskGdzStPPo1auRQygJUfbmLMwujWr7fmekdUMD7gqSpwEcRso4CfiP5GkRqfXFYkfqTujyvuehb7inymMhBJFdbJqFyHsHVRuwLKCSe9/0/*),s:pk([f3ab64d8/86'/1'/784923']tpubDCh4uyVDVretfgTNkazUarV9ESTh7DJy8yvMSuWn5PQFbTDEsJwHGSBvTrNF92kw3x5ZLFXw91gN5LYtuSCbr1Vo6mzQmD49sF2vGpReZp2/0/*),snl:after(1721743844),snl:after(1747663844)))#p0skyz4j
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="m-of-n-template"><a class="header" href="#m-of-n-template">M-of-N Template</a></h1>
-<ul>
-<li>use case description</li>
-<li>screenshot of vault editor</li>
-<li>miniscript template code </li>
-</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="collaborative-custody-template"><a class="header" href="#collaborative-custody-template">Collaborative Custody Template</a></h1>
+<h2 id="description-1"><a class="header" href="#description-1">Description</a></h2>
+<p>Collaborative custody allows users to configure the number of co-signers and the threshold required to access the vault’s bitcoin. </p>
+<p>Users can choose a 2 of 3, 3 of 5, or a custom configuration, this feature ensures that multiple trusted parties agree before a transaction takes place. It's an ideal solution for shared ownership and collaborative arrangements.</p>
+<h2 id="vault-configuration-example-1"><a class="header" href="#vault-configuration-example-1">Vault Configuration Example</a></h2>
+<h2 id="inputs-1"><a class="header" href="#inputs-1">Inputs</a></h2>
+<h2 id="miniscript-1"><a class="header" href="#miniscript-1">Miniscript</a></h2>
+<pre><code>
+</code></pre>
+<h2 id="output-descriptor-1"><a class="header" href="#output-descriptor-1">Output Descriptor</a></h2>
+<pre><code>
+</code></pre>
+<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<p>Example Output Descriptor</p>
+<pre><code>
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hold-template"><a class="header" href="#hold-template">Hold Template</a></h1>
-<ul>
-<li>use case description</li>
-<li>screenshot of vault editor</li>
-<li>miniscript template code </li>
-</ul>
+<h2 id="description-2"><a class="header" href="#description-2">Description</a></h2>
+<p>Hodl time locks let’s user set specific time intervals, with a maximum of 24 months, during which their bitcoin remains locked. </p>
+<p>The hodl time lock feature prevents impulsive selling during market fluctuations and allows users to stick to their investment strategy.</p>
+<h2 id="vault-configuration-example-2"><a class="header" href="#vault-configuration-example-2">Vault Configuration Example</a></h2>
+<h2 id="inputs-2"><a class="header" href="#inputs-2">Inputs</a></h2>
+<h2 id="miniscript-2"><a class="header" href="#miniscript-2">Miniscript</a></h2>
+<pre><code>
+</code></pre>
+<h2 id="output-descriptor-2"><a class="header" href="#output-descriptor-2">Output Descriptor</a></h2>
+<pre><code>
+</code></pre>
+<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<p>Example Output Descriptor</p>
+<pre><code>
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="inheritance-template"><a class="header" href="#inheritance-template">Inheritance Template</a></h1>
 <ul>
 <li>use case description</li>
@@ -239,11 +259,21 @@
 <li>miniscript template code </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="social-recovery-template"><a class="header" href="#social-recovery-template">Social Recovery Template</a></h1>
-<ul>
-<li>use case description</li>
-<li>screenshot of vault editor</li>
-<li>miniscript template code </li>
-</ul>
+<h2 id="description-3"><a class="header" href="#description-3">Description</a></h2>
+<p>Social recovery keeps you in full and exclusive control of your bitcoin while enabling a recovery path in case you lose your keys. After a predefined number of months set by the user, an m of n multisig of trusted co-signers is able to move the user funds</p>
+<p>Between 20%-25% of all bitcoin has been lost forever by owners who lost their keys. This security feature helps you have a plan B, leveraging trusted connections like friends, family, or colleagues to regain access to your Bitcoin</p>
+<h2 id="vault-configuration-example-3"><a class="header" href="#vault-configuration-example-3">Vault Configuration Example</a></h2>
+<h2 id="inputs-3"><a class="header" href="#inputs-3">Inputs</a></h2>
+<h2 id="miniscript-3"><a class="header" href="#miniscript-3">Miniscript</a></h2>
+<pre><code>
+</code></pre>
+<h2 id="output-descriptor-3"><a class="header" href="#output-descriptor-3">Output Descriptor</a></h2>
+<pre><code>
+</code></pre>
+<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
+<p>Example Output Descriptor</p>
+<pre><code>
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kinds"><a class="header" href="#kinds">Kinds</a></h1>
 <p>In the current protocol (<code>v1</code>) all objects (<code>shared keys</code>, <code>vaults</code>, <code>proposals</code>, ...) are encrypted using <a href="https://github.com/nostr-protocol/nips/blob/master/04.md">NIP04</a>.</p>
 <h2 id="9288---shared-key"><a class="header" href="#9288---shared-key">9288 - Shared Key</a></h2>
@@ -254,7 +284,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>vault</code></li>
 <li><code>p</code>: public key of the user able to decrypt the content of this event</li>
 </ul>
-<h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
+<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
 <pre><code class="language-json">{
     &quot;content&quot;:&quot;PDj1bNB1PuWKzPc1RrKBmbEeXDaYkxRIsAqTraJscUq4ML3+mZzJq4O6vPkkIJeZuNQTp0EyLxAvUblXCgJxaEgwxRWQC+rpdz3ILjdQA2w=?iv=B5KnzXU7smmAWevhTi1rSg==&quot;,
     &quot;created_at&quot;:1693903672,
@@ -273,7 +303,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <ul>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-2"><a class="header" href="#example-2">Example</a></h3>
+<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;description&quot;:&quot;Vault description&quot;,
@@ -301,7 +331,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>vault</code></li>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-3"><a class="header" href="#example-3">Example</a></h3>
+<h3 id="example-6"><a class="header" href="#example-6">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;Spending&quot;: {
@@ -338,7 +368,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <ul>
 <li><code>expiration</code>: UNIX timestamp of the expiration of the approval</li>
 </ul>
-<h3 id="example-4"><a class="header" href="#example-4">Example</a></h3>
+<h3 id="example-7"><a class="header" href="#example-7">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;Spending&quot;:{
@@ -369,7 +399,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>vault</code> and the <code>proposal</code></li>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-5"><a class="header" href="#example-5">Example</a></h3>
+<h3 id="example-8"><a class="header" href="#example-8">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;Spending&quot;:{
@@ -421,7 +451,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 }
 </code></pre>
 <h2 id="9094---signer"><a class="header" href="#9094---signer">9094 - Signer</a></h2>
-<h3 id="example-6"><a class="header" href="#example-6">Example</a></h3>
+<h3 id="example-9"><a class="header" href="#example-9">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;description&quot;:null,
@@ -448,7 +478,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>e</code>: event ID of the <code>signer</code></li>
 <li><code>p</code>: public key of the user to you are sharing signer to</li>
 </ul>
-<h3 id="example-7"><a class="header" href="#example-7">Example</a></h3>
+<h3 id="example-10"><a class="header" href="#example-10">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;descriptor&quot;:&quot;tr(...)&quot;,
@@ -476,7 +506,7 @@ It's used to encrypt and decrypt everything related to a <code>vault</code>.</p>
 <li><code>d</code>: unique ID of the <code>label</code></li>
 <li><code>p</code>: public keys of the users involved in the <code>vault</code></li>
 </ul>
-<h3 id="example-8"><a class="header" href="#example-8">Example</a></h3>
+<h3 id="example-11"><a class="header" href="#example-11">Example</a></h3>
 <p>Unencrypted content:</p>
 <pre><code class="language-json">{
     &quot;data&quot;:{

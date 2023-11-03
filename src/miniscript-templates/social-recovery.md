@@ -8,7 +8,9 @@ Between 20%-25% of all bitcoin has been lost forever by owners who lost their ke
 
 ## Vault Configuration Example
 
-TODO
+To initiate the spending of funds via social recovery in the multisig setup, it can be accomplished either by your designated signer or by following the social recovery path. However, this is only possible once the specified timelock duration has elapsed, and it requires the authorization of at least one out of your two designated signers for recovery. [either Thomas or Lee]
+
+![image](https://github.com/smartvaults/smartvaults/assets/88842056/82d15056-8679-4ba0-8bfe-2095ffccb6c9)
 
 ## Inputs
 

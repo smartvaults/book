@@ -8,7 +8,9 @@ Users can choose a 2 of 3, 3 of 5, or a custom configuration, this feature ensur
 
 ## Vault Configuration Example
 
-TODO
+To authorize a transaction, any combination of 2 out of the 3 keys (Thomas, Lee, or My Signer) is required. In other words, you can use any pair of these keys to successfully spend the funds.
+![image](https://github.com/smartvaults/smartvaults/assets/88842056/87b42cbc-4c7c-48c6-b924-82eae77651a4)
+
 
 ## Inputs
 

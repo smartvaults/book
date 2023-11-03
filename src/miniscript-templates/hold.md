@@ -7,8 +7,12 @@ Hodl time locks let’s user set specific time intervals, with a maximum of 24 m
 The hodl time lock feature prevents impulsive selling during market fluctuations and allows users to stick to their investment strategy.
 
 ## Vault Configuration Example
+To spend the funds, the second condition must be met, which involves an absolute timelock represented by `1701559661` in the example. 
 
-TODO
+This timelock will be satisfied after the specified time [1 month] has passed since the creation of this transaction.
+
+
+![image](https://github.com/smartvaults/smartvaults/assets/88842056/5626c0ff-9351-427a-8bcf-86f33f441eb8)
 
 ## Inputs
 

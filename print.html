@@ -225,7 +225,8 @@
 <p>Collaborative custody allows users to configure the number of co-signers and the threshold required to access the vault’s bitcoin. </p>
 <p>Users can choose a 2 of 3, 3 of 5, or a custom configuration, this feature ensures that multiple trusted parties agree before a transaction takes place. It's an ideal solution for shared ownership and collaborative arrangements.</p>
 <h2 id="vault-configuration-example-1"><a class="header" href="#vault-configuration-example-1">Vault Configuration Example</a></h2>
-<p>TODO</p>
+<p>To authorize a transaction, any combination of 2 out of the 3 keys (Thomas, Lee, or My Signer) is required. In other words, you can use any pair of these keys to successfully spend the funds.
+<img src="https://github.com/smartvaults/smartvaults/assets/88842056/87b42cbc-4c7c-48c6-b924-82eae77651a4" alt="image" /></p>
 <h2 id="inputs-1"><a class="header" href="#inputs-1">Inputs</a></h2>
 <ul>
 <li>Threshold</li>
@@ -252,7 +253,9 @@
 <p>Hodl time locks let’s user set specific time intervals, with a maximum of 24 months, during which their bitcoin remains locked. </p>
 <p>The hodl time lock feature prevents impulsive selling during market fluctuations and allows users to stick to their investment strategy.</p>
 <h2 id="vault-configuration-example-2"><a class="header" href="#vault-configuration-example-2">Vault Configuration Example</a></h2>
-<p>TODO</p>
+<p>To spend the funds, the second condition must be met, which involves an absolute timelock represented by <code>1701559661</code> in the example. </p>
+<p>This timelock will be satisfied after the specified time [1 month] has passed since the creation of this transaction.</p>
+<p><img src="https://github.com/smartvaults/smartvaults/assets/88842056/5626c0ff-9351-427a-8bcf-86f33f441eb8" alt="image" /></p>
 <h2 id="inputs-2"><a class="header" href="#inputs-2">Inputs</a></h2>
 <ul>
 <li>Signer key (extended descriptor)</li>
@@ -273,7 +276,8 @@
 <p>Social recovery keeps you in full and exclusive control of your bitcoin while enabling a recovery path in case you lose your keys. After a predefined number of months set by the user, an m of n multisig of trusted co-signers is able to move the user funds</p>
 <p>Between 20%-25% of all bitcoin has been lost forever by owners who lost their keys. This security feature helps you have a plan B, leveraging trusted connections like friends, family, or colleagues to regain access to your Bitcoin</p>
 <h2 id="vault-configuration-example-3"><a class="header" href="#vault-configuration-example-3">Vault Configuration Example</a></h2>
-<p>TODO</p>
+<p>To initiate the spending of funds via social recovery in the multisig setup, it can be accomplished either by your designated signer or by following the social recovery path. However, this is only possible once the specified timelock duration has elapsed, and it requires the authorization of at least one out of your two designated signers for recovery. [either Thomas or Lee]</p>
+<p><img src="https://github.com/smartvaults/smartvaults/assets/88842056/82d15056-8679-4ba0-8bfe-2095ffccb6c9" alt="image" /></p>
 <h2 id="inputs-3"><a class="header" href="#inputs-3">Inputs</a></h2>
 <ul>
 <li>Signer keys (extended descriptor): 1 + N for recovery</li>

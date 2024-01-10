@@ -6,5 +6,6 @@ language = "en"
 multilingual = false
 
 [output.html]
+additional-js = ["tabs.js"]
 git-repository-url = "https://github.com/smartvaults/book"
 edit-url-template = "https://github.com/smartvaults/book/edit/master/{path}"

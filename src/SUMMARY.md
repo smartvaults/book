@@ -2,6 +2,8 @@
 
 [Introduction](README.md)
 
+# [Release Notes](./release-notes/index.md)
+
 # Miniscript Templates
 
 - [Decaying Multisig](./miniscript-templates/decaying-multisig.md)

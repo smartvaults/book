@@ -2,7 +2,9 @@
 
 [Introduction](README.md)
 
-# [Release Notes](./release-notes/index.md)
+# Release Notes
+
+- [0.4.0](./release-notes/0.4.0.md)
 
 # Miniscript Templates
 

@@ -55,7 +55,7 @@ Algunos de los análisis que Miniscript facilita son:
 
 - Análisis de condiciones de gasto: ¿Cuáles son las condiciones de gasto de un script?
 - Análisis de seguridad: ¿Es posible que un script sea maleable?
-- Análisis de costos: ¿Cuál sera el costo de usar un script?
+- Análisis de costos: ¿Cuál será el costo de usar un script?
 
 ## Composición
 

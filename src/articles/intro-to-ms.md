@@ -26,14 +26,44 @@ Por lo tanto Miniscript es:
 Un lenguaje para escribir un subconjunto de Bitcoin Scripts.
 </div>
 
+Primero, comenzaremos comentando sobre algunos de los conceptos que aparecen en la definición.
+
+## Bitcoin Script
+
+Si una divisa ha de ser de alguna utilidad, sin duda es necesario que esta pueda ser transferida.
+
+Por lo tanto es necesario definir un mecanismo que permita tal transferencia. Adicionalmente, tal mecanismo debe poder asegurar el cumplimiento de ciertas condiciones, por ejemplo, que la persona que transfiere la divisa tenga el derecho de hacerlo.
+
+En el caso de Bitcoin, el lenguaje que permite definir (y comprobar) estas condiciones se conoce como Bitcoin Script.
+
+Bitcoin Script es un lenguaje de programación relativamente simple, pero que, como veremos, puede ser difícil de usar.
+
+En las siguientes secciones, siempre que utilzemos la palabra *script* nos referiremos a un Bitcoin Script.
+
+## Estructura
+
 Todo lenguaje implica estructura, la estructura de miniscript, nos dice la definición, habilita entre otras cosas:
 
 1. Análisis
 1. Composición
 
-Primero, comenzaremos comentando sobre una palabra que posiblemente cause ruido al lector:
+## Análisis
 
-***Subconjunto***
+El análisis es uno de esos conceptos que cuya definición es más clara cuando se le asigna un apellido.
+
+Algunos de los análisis que Miniscript facilita son:
+
+- Análisis de condiciones de gasto: ¿Cuáles son las condiciones de gasto de un script?
+- Análisis de seguridad: ¿Es posible que un script sea maleable?
+- Análisis de costos: ¿Cuál sera el costo de usar un script?
+
+## Composición
+
+La composición es el acto de juntar dos o más cosas para formar una nueva.
+
+En el caso de Miniscript, la composición se refiere a la habilidad de juntar dos o más fragmentos (scripts) para formar uno nuevo.
+
+## Subconjunto
 
 Para bien o para mal la palabra subconjunto trae consigo una connotación intuitiva, y como toda intuición, no siempre está en lo correcto, un ejemplo bastará:
 
@@ -51,7 +81,7 @@ Aunque el comentario anterior puede parecer trivial, en realidad, encapsula la m
 Usar Bitcoin Script es difícil.
 </div>
 
-En particular, con Bitcoin Script es difícil:
+En particular, con Bitcoin Script es difícil realizar los análisis mencionados en la sección anterior, a decir:
 
 - Determinar si un script es *correcto*.
 - Determinar si un script es seguro (i.e no es propenso a ser maleable).
@@ -87,8 +117,6 @@ Bitcoin Script **(B)**:
 <div style="text-align: center;">
   <img src="Script.jpeg" width=400/>
 </div>
-
-![](Aspose.Words.cc4649b0-9c11-4295-ab5d-d06b3fb48f54.001.png)
 
 Invitamos al lector a analizar por un momento la expresión **(A)**.
 

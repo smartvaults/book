@@ -165,7 +165,11 @@ Naturalmente, el lector puede pensar que la razón de existir estos dos lenguaje
 Existen diferentes formas (Bitcoin Scripts) de representar una misma condición de gasto.
 </div>
 
-Para ilustrar el problema, tomemos una condición de gasto simple: pk(A)
+Para ilustrar el problema, consideremos una condición de gasto simple:
+
+<div style="text-align: center;">
+pk(A)
+</div>
 
 Podemos decir que existen al menos cuatro formas (opcodes) de comprobar esta condición:
 
@@ -176,7 +180,11 @@ Podemos decir que existen al menos cuatro formas (opcodes) de comprobar esta con
 
 En realidad basta con darnos cuenta que existen muchas formas de combinar los operadores 'and' y 'or' para expresar una condición dada.
 
-Si hay varias opciones disponibles, tenemos la libertad de elegir ciertos parámetros de intéres para facilitar la elección, uno de ellos, del que hablaremos a continuación es: optimización.
+Si hay varias opciones disponibles, tenemos la libertad de elegir ciertos parámetros de intéres para facilitar la elección, uno de ellos, del que hablaremos a continuación es:
+
+<div style="text-align: center;">
+Optimización
+</div>
 
 ## Probabilidades y Optimización
 
@@ -188,7 +196,7 @@ Empezaremos aclarando que ‘N@’ **NO** es un operador sobre el booleano pk(A)
 
 N@pk(A) es verdadero si pk(A) es verdadero y falso si pk(A) es falso, sin importar el valor de N.
 
-‘N@’ es la notación para asignar a pk(A) una probabilidad relativa respecto a las otras condiciones que aparecen dentro de un mismo ‘or’.
+‘N@pk(A)’ es la notación para asignar a pk(A) una probabilidad relativa respecto a las otras condiciones que aparecen dentro de un mismo ‘or’.
 
 Por lo tanto en la expresión **(A),** la presencia de ‘9@pk(Charlie)’ es para comunicarle al compilador, que la condición ‘pk(Charlie)’ es 9 veces más probable que la condición ‘after(1710526010)’.
 

@@ -195,7 +195,7 @@ N@pk(A) is true if pk(A) is true and false if pk(A) is false, regardless of the 
 
 ‘N@pk(A)’ is the notation for assigning pk(A) a relative probability compared to the other conditions that appear within the same ‘or’.
 
-Therefore, in expression **(A)**, the presence of ‘9@pk(Charlie)’ is to communicate to the compiler that the condition ‘pk(Charlie)’ is 9 times more likely than the condition
+Therefore, in expression **(A)**, the presence of ‘9@pk(Charlie)’ is to communicate to the compiler that the condition ‘pk(Charlie)’ is 9 times more likely than the condition 'after(1710526010)'.
 
 But, what is the purpose of assigning probabilities?
 

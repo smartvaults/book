@@ -50,6 +50,7 @@
 
 # Articles
 
-- [Introducción a Miniscript](./articles/intro-to-ms.md)
+- [Introducción a Miniscript](./articles/intro-to-ms-es.md)
+- [Introduction to Miniscript](./articles/intro-to-ms-en.md)
 
 # About

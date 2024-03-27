@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction to Miniscript - Smart Vaults Book</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Release Notes</li><li class="chapter-item expanded "><a href="../release-notes/0.4.0.html"><strong aria-hidden="true">1.</strong> 0.4.0</a></li><li class="chapter-item expanded affix "><li class="part-title">Miniscript Templates</li><li class="chapter-item expanded "><a href="../miniscript-templates/decaying-multisig.html"><strong aria-hidden="true">2.</strong> Decaying Multisig</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/m-of-n.html"><strong aria-hidden="true">3.</strong> Collaborative Custody</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/hold.html"><strong aria-hidden="true">4.</strong> Hodl Lock</a></li><li class="chapter-item expanded "><a href="../miniscript-templates/social-recovery.html"><strong aria-hidden="true">5.</strong> Social Recovery / Inheritance</a></li><li class="chapter-item expanded affix "><li class="part-title">Nostr Specs</li><li class="chapter-item expanded "><a href="../kinds/index.html"><strong aria-hidden="true">6.</strong> Event Kinds</a></li><li class="chapter-item expanded affix "><li class="part-title">SDKs</li><li class="chapter-item expanded "><a href="../rust-sdk/01-getting-started.html"><strong aria-hidden="true">7.</strong> Rust SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/02-installation.html"><strong aria-hidden="true">7.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../rust-sdk/03-features.html"><strong aria-hidden="true">7.2.</strong> Features</a></li><li class="chapter-item expanded "><a href="../rust-sdk/04-constructors.html"><strong aria-hidden="true">7.3.</strong> Constructors</a></li><li class="chapter-item expanded "><a href="../rust-sdk/05-configs-and-relays.html"><strong aria-hidden="true">7.4.</strong> Configs & Relays</a></li><li class="chapter-item expanded "><a href="../rust-sdk/06-profile-and-contacts.html"><strong aria-hidden="true">7.5.</strong> Profile & Contacts</a></li><li class="chapter-item expanded "><a href="../rust-sdk/07-signers.html"><strong aria-hidden="true">7.6.</strong> Signers</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/01-index.html"><strong aria-hidden="true">7.7.</strong> Policies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/02-templates.html"><strong aria-hidden="true">7.7.1.</strong> Templates</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/03-custom-policies.html"><strong aria-hidden="true">7.7.2.</strong> Custom policies</a></li><li class="chapter-item expanded "><a href="../rust-sdk/08-policies/04-funding.html"><strong aria-hidden="true">7.7.3.</strong> Funding</a></li></ol></li><li class="chapter-item expanded "><a href="../rust-sdk/09-proposals.html"><strong aria-hidden="true">7.8.</strong> Proposals</a></li><li class="chapter-item expanded "><a href="../rust-sdk/10-connect.html"><strong aria-hidden="true">7.9.</strong> Connect</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/01-index.html"><strong aria-hidden="true">7.10.</strong> Keychain</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rust-sdk/keychain/02-change-password.html"><strong aria-hidden="true">7.10.1.</strong> Change password</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/03-secrets.html"><strong aria-hidden="true">7.10.2.</strong> Secrets</a></li><li class="chapter-item expanded "><a href="../rust-sdk/keychain/04-wipe.html"><strong aria-hidden="true">7.10.3.</strong> Wipe</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../js-sdk/01-getting-started.html"><strong aria-hidden="true">8.</strong> JavaScript SDK</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js-sdk/02-contacts-and-profiles.html"><strong aria-hidden="true">8.1.</strong> contacts and profiles</a></li><li class="chapter-item expanded "><a href="../js-sdk/03-signers.html"><strong aria-hidden="true">8.2.</strong> signers</a></li><li class="chapter-item expanded "><a href="../js-sdk/04-vaults/01-vaults.html"><strong aria-hidden="true">8.3.</strong> vaults</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js-sdk/04-vaults/02-creating-a-vault.html"><strong aria-hidden="true">8.3.1.</strong> creating vaults</a></li></ol></li><li class="chapter-item expanded "><a href="../js-sdk/05-proposals/01-creating-proposals.html"><strong aria-hidden="true">8.4.</strong> proposals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js-sdk/05-proposals/01-creating-proposals.html"><strong aria-hidden="true">8.4.1.</strong> creating proposals</a></li><li class="chapter-item expanded "><a href="../js-sdk/05-proposals/02-fetching-proposals.html"><strong aria-hidden="true">8.4.2.</strong> fetching proposals</a></li><li class="chapter-item expanded "><a href="../js-sdk/05-proposals/03-approvals.html"><strong aria-hidden="true">8.4.3.</strong> approving proposals</a></li><li class="chapter-item expanded "><a href="../js-sdk/05-proposals/04-finalizing-a-proposal.html"><strong aria-hidden="true">8.4.4.</strong> finalizing proposals</a></li></ol></li></ol></li><li class="chapter-item expanded "><li class="part-title">Articles</li><li class="chapter-item expanded "><a href="../articles/intro-to-ms-es.html"><strong aria-hidden="true">9.</strong> Introducción a Miniscript</a></li><li class="chapter-item expanded "><a href="../articles/intro-to-ms-en.html" class="active"><strong aria-hidden="true">10.</strong> Introduction to Miniscript</a></li><li class="chapter-item expanded affix "><li class="part-title">About</li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Smart Vaults Book</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/smartvaults/book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/smartvaults/book/edit/master/src/articles/intro-to-ms-en.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div align="center">
+  <img src="../SV-Logo-Vertical-Black.svg" width=400/>
+</div>
+<h1 id="introduction-to-miniscript"><a class="header" href="#introduction-to-miniscript">Introduction to Miniscript</a></h1>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>In this article, we will discuss Miniscript, aiming to cover the main ideas, which we believe are of interest to anyone looking to start using this powerful tool.</p>
+<p>The best way to get introduced to a new technology is, as we know, by reading its documentation. The most comprehensive documentation can be found at: <a href="https://bitcoin.sipa.be/miniscript/">https://bitcoin.sipa.be/miniscript/</a>, written by Pieter Wuille, one of the creators of Miniscript. There, we find the definition that we will use in this article:</p>
+<div style="text-align: center; font-style:italic ;">
+“Miniscript is a language for writing (a subset of) Bitcoin Scripts in a structured way, enabling analysis, composition, generic signing and more”
+</div>
+<p>Therefore, according to the definition, Miniscript is:</p>
+<div style="text-align: center; font-style:italic ;">
+A language for writing a subset of Bitcoin Scripts.
+</div>
+<p>First, we will begin by discussing some of the concepts that appear in the definition.</p>
+<h2 id="bitcoin-script"><a class="header" href="#bitcoin-script">Bitcoin Script</a></h2>
+<p>If a currency is to be of any use, it is necessary for it to be transferable.</p>
+<p>Therefore, it is necessary to define a mechanism that allows such transfer. Additionally, such a mechanism must be able to ensure the fulfillment of certain conditions, for example, that the person transferring the currency has the right to do so.</p>
+<p>In the case of Bitcoin, the language that allows defining (and checking) these conditions is known as Bitcoin Script.</p>
+<p>Bitcoin Script is a relatively simple programming language but, as we will see, can be difficult to use in practice.</p>
+<p>In the following sections, whenever we use the word script, we will be referring to a Bitcoin Script.</p>
+<h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
+<p>Every language implies structure, and the structure of Miniscript, as the definition tells us, enables among other things:</p>
+<ol>
+<li>Analysis</li>
+<li>Composition</li>
+</ol>
+<h2 id="analysis"><a class="header" href="#analysis">Analysis</a></h2>
+<p>Analysis is the act of examining something in detail, in this case, a script.</p>
+<p>Some of the analyses that Miniscript facilitates are:</p>
+<ul>
+<li>Analysis of spending conditions: What are the spending conditions of a script?</li>
+<li>Security analysis: Is it possible for a script to be malleable?</li>
+<li>Cost analysis: What will be the cost of using a script?</li>
+</ul>
+<h2 id="composition"><a class="header" href="#composition">Composition</a></h2>
+<p>Composition is the act of joining two or more things to form a new one.</p>
+<p>In the case of Miniscript, composition refers to the ability to join two or more fragments (scripts) to form a new one.</p>
+<h2 id="subset"><a class="header" href="#subset">Subset</a></h2>
+<p>For better or worse, the word subset brings with it an intuitive connotation, and like all intuition, it is not always correct. One example will suffice:</p>
+<div style="text-align: center; font-style:italic ;">
+Drinking water is a subset of liquids.
+</div>
+<p>While it is true that the set of liquids has much more to offer than just water, it's easy to see why, in our daily lives, we are only interested in a particular subset.</p>
+<p>The same is true in the case of Miniscript: the selected subset is such that it allows us to work with Bitcoin Script without having to worry too much about some of its complexities.</p>
+<p>Although the above comment may seem trivial, it actually encapsulates the main motivation for using Miniscript:</p>
+<div style="text-align: center; font-style:italic ;">
+Using Bitcoin Script is hard.
+</div>
+<p>In particular, with Bitcoin Script, it is difficult to perform the analyses mentioned in the previous section, namely:</p>
+<ul>
+<li>Determine if a script is correct.</li>
+<li>Determine if a script is safe (not prone to being malleable).</li>
+<li>Estimate fees (the size of a transaction in the worst case).</li>
+</ul>
+<p>Before we continue our discussion, it is useful to introduce the following definition:</p>
+<p><strong>Spending condition</strong>: is the set of minimum conditions that, when met, allow a UTXO to be successfully used in a transaction.</p>
+<p>For example:</p>
+<ul>
+<li>The (single) spending condition of a single-sig wallet is the owner's signature.</li>
+<li>The (single) spending condition of a 2 of 2 multisig wallet is the signature of the two keys involved.</li>
+<li>One (of two total) spending condition of a 1 of 2 multisig wallet is the signature of one of the keys involved.</li>
+</ul>
+<p>While some points, like security, can (and often are) minimized by policy-level restrictions, Miniscript also solves another problem:</p>
+<div style="text-align: center; font-style:italic ;">
+given a Bitcoin Script, is it possible, through simple analysis, to determine all possible spending conditions?
+</div>
+<p>The answer is, for most of us: No.</p>
+<p>To convince ourselves, let's look at the following example:</p>
+<p>Miniscript Policy <strong>(A)</strong>:</p>
+<div style="text-align: center;">
+and(pk(Alice),or(pk(Bob),or(9@pk(Charlie),after(1710526010))))
+</div>
+<p>Bitcoin Script <strong>(B)</strong>:</p>
+<div style="text-align: center;">
+  <img src="Script.jpeg" width=400/>
+</div>
+<p>We invite the reader to analyze expression <strong>(A)</strong> for a moment.</p>
+<p>Assuming that a condition is a spending condition, in the context of Miniscript, if the entire expression, when logically evaluated, becomes true, it should be easy to convince oneself that the spending conditions are:</p>
+<ul>
+<li>Alice's signature and Bob's signature</li>
+<li>Alice's signature and Charlie's signature</li>
+<li>Alice's signature and the specified time (1710526010 unix time) has elapsed.</li>
+</ul>
+<p>If the spending conditions mentioned above are true, it follows that:</p>
+<ul>
+<li>
+<p>The and and or operators behave similarly to their logical counterparts (when in doubt, consult the truth tables for conjunctions and disjunctions).</p>
+</li>
+<li>
+<p>Each of its elements must be able to be evaluated to a boolean (true or false).</p>
+</li>
+</ul>
+<p>It would be incorrect to claim that expressions <strong>(A)</strong> and <strong>(B)</strong> are equivalent (remember our brief digression on subsets), but the spending conditions expressed in Miniscript are preserved when transitioning (with the help of a compiler) from <strong>(A)</strong> to <strong>(B)</strong>.</p>
+<h2 id="two-miniscripts"><a class="header" href="#two-miniscripts">Two Miniscripts?</a></h2>
+<p>The reader may have noticed that in the previous section we referred to expression <strong>(A)</strong> as Miniscript Policy and not as Miniscript.</p>
+<p>The reason is that they are two different languages.</p>
+<p>The following expression <strong>(C)</strong>:</p>
+<div style="text-align: center;">
+and_v(or_c(pk(Bob),or_c(pk(Charlie),v:after(1710526010))),pk(Alice))
+</div>
+<p>Is the Miniscript generated by the Miniscript Policy <strong>(A)</strong>.</p>
+<p>Let's examine <strong>(A)</strong> again:</p>
+<div style="text-align: center;">
+and(pk(Alice),or(pk(Bob),or(9@pk(Charlie),after(1710526010))))
+</div>
+<p>Notice that the expressions are very similar, only some things are removed from <strong>(A)</strong>, like that strange ‘9@’ (which we will talk about in the next section), others are added like the ‘v:’, and to the ‘and’ and ‘or’ a couple of characters are added (in reality, these are types and modifiers).</p>
+<p>While we will not go into details about what each of the changes that occur when going from <strong>(A)</strong> to <strong>(C)</strong> means, it is worth mentioning how this transformation occurs:</p>
+<p>The Miniscript <strong>(C)</strong> is obtained by compiling the Miniscript Policy <strong>(A)</strong>.</p>
+<p>Naturally, the reader might think that the reason for these two languages to exist is only to save us the work of adding all those characters (apparently necessary) that appear in <strong>(A)</strong>, but the reason turns out to be more fundamental:</p>
+<div style="text-align: center;">
+There are different ways (Bitcoin Scripts) to represent the same spending condition.
+</div>
+<p>To illustrate the problem, let's take a simple spending condition.</p>
+<div style="text-align: center;">
+pk(A)
+</div>
+<p>pk(A) is true if there is a valid signature from A and false otherwise.</p>
+<p>In principle there are at least four ways (opcodes) to check this condition:</p>
+<ol>
+<li>OP_CHECKSIG</li>
+<li>OP_CHECKSIGVERIFY</li>
+<li>OP_CHECKMULTISIG</li>
+<li>OP_CHECKMULTISIGVERIFY</li>
+</ol>
+<p>In fact, it is enough to realize that there are many ways to combine the 'and' and 'or' operators to express a given condition.</p>
+<p>If there are several options available, we have the freedom to choose certain parameters of interest to facilitate the choice, one of them, which we will discuss next, is:</p>
+<div style="text-align: center;">
+Optimization
+</div>
+<h2 id="probabilities-and-optimization"><a class="header" href="#probabilities-and-optimization">Probabilities and Optimization</a></h2>
+<p>Previously we mentioned that to determine the spending conditions it is useful to think that all the elements within the 'and' and 'or' operators must be able to be evaluated to a boolean. If we assume that pk(A) is true when there is a valid signature from A and false otherwise, the question arises:</p>
+<p>What does ‘N@pk(A)’ mean where N is an integer?</p>
+<p>Let's start by clarifying that ‘N@’ is NOT an operator on the boolean pk(A):</p>
+<p>N@pk(A) is true if pk(A) is true and false if pk(A) is false, regardless of the value of N.</p>
+<p>‘N@pk(A)’ is the notation for assigning pk(A) a relative probability compared to the other conditions that appear within the same ‘or’.</p>
+<p>Therefore, in expression <strong>(A)</strong>, the presence of ‘9@pk(Charlie)’ is to communicate to the compiler that the condition ‘pk(Charlie)’ is 9 times more likely than the condition 'after(1710526010)'.</p>
+<p>But, what is the purpose of assigning probabilities?</p>
+<p>As mentioned in the previous section, given a set of possible choices, it is to our advantage to choose the one that, among other things, is optimal.</p>
+<p>We say a choice is optimal if, by including it, the resulting script's size is the smallest.</p>
+<p>By assigning probabilities, we can communicate to the compiler that one branch is more likely (or not) than the others; in other words, we tell it to prioritize optimizing (reducing the size) of the more likely branch, at the expense of possibly increasing the size of the less probable one.</p>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
+<p>In this article, we have talked a bit about the motivation to use Miniscript, as well as some of its main ideas. We invite the reader to read the official documentation if interested in a more in depth discussion.</p>
+<p>In subsequent publications, we will discuss Taproot and how it can be used in conjunction with Miniscript.</p>
+<p>Author:</p>
+<p><span style="font-weight: bold; color: blue;">Armando Medina</span></p>
+<div align="center">
+  <img src="../SV-Logo-Vertical-Black.svg" width=400/>
+</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../articles/intro-to-ms-es.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../articles/intro-to-ms-es.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../tabs.js"></script>
+
+
+    </div>
+    </body>
+</html>

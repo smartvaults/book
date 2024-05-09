@@ -52,6 +52,7 @@
 
 - [Introducción a Miniscript](./articles/intro-to-ms-es.md)
 - [Introduction to Miniscript](./articles/intro-to-ms-en.md)
-- [Social Recovery: Do you want to self-custody your bitcoin but are afraid of losing access to it?](./articles/social-recovery.md)
+- [Social Recovery](./articles/social-recovery.md)
+i
 
 # About

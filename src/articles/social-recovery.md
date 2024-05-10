@@ -25,7 +25,7 @@ The Social Recovery Template is a self-custody solution that helps you ensure yo
 - Specify the time that needs to elapse before the signatures of those keys become valid.
 - Specify the number of recovery signatures needed for recovery.
 
-So, in the unfortunate [but very possible](https://www.nytimes.com/2021/01/13/business/tens-of-billions-worth-of-bitcoin-have-been-locked-by-people-who-forgot-their-key.html) scenario where you lose access to your keys, the recovery cosigners you defined when creating the vault can help you recover your Bitcoin after the specified period of time has passed.
+So, in the unfortunate [but possible](https://www.nytimes.com/2021/01/13/business/tens-of-billions-worth-of-bitcoin-have-been-locked-by-people-who-forgot-their-key.html) scenario where you lose access to your keys, the recovery cosigners you defined when creating the vault can help you recover your Bitcoin after the specified period of time has passed.
 
 The Social Recovery Vault mitigates the key management problem by distributing the responsibility of key safekeeping among trusted individuals. These guardians do not have any control over your Bitcoin before the specified time has elapsed, and even after the time has passed, any transaction will need to have the required number of signatures you defined. This way, you maintain full control over your assets while having a safety net in case of key loss or technical errors.
 
@@ -65,6 +65,6 @@ To create a Social Recovery Vault on the Smart Vaults iOS app, follow these step
 
 ![SR-threshold](https://github.com/smartvaults/smartvaults/assets/71672123/30e0d076-fde6-4c1d-931c-8bc79d035b6b)
 
-1. Congratulations! You have successfully created your Social Recovery Vault.
+1. Congratulations! You have successfully created your first Social Recovery Vault.
 
 ![SR-done](https://github.com/smartvaults/smartvaults/assets/71672123/01af7911-ad64-4040-a31e-6f257a366271)

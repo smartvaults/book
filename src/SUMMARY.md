@@ -52,5 +52,7 @@
 
 - [Introducción a Miniscript](./articles/intro-to-ms-es.md)
 - [Introduction to Miniscript](./articles/intro-to-ms-en.md)
+- [Social Recovery](./articles/social-recovery.md)
+i
 
 # About

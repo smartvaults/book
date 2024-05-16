@@ -39,32 +39,48 @@ In the following guide, we will assume you have already installed the Smart Vaul
 
 for a step-by-step guide on how to add contacts and share signers, you can watch the following video:
 
-<iframe width="750" height="315" src="https://www.youtube.com/embed/XDfBl4S_6R8?si=GHYDuf2CcSplWRur" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div align="center">
+    <iframe width="450" height="315" src="https://www.youtube.com/embed/XDfBl4S_6R8?si=GHYDuf2CcSplWRur" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
-To create a Social Recovery Vault on the Smart Vaults iOS app, follow these steps:
+  To create a Social Recovery Vault on the Smart Vaults iOS app, follow these steps:
 
 1. Navigate to the Vaults tab by clicking the plus icon located on the right upper corner of your screen.
 
-![SR-new-vault](https://github.com/smartvaults/smartvaults/assets/71672123/b84cb17d-8bfa-4bd8-ad96-ffe7e1ad87b5)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/b84cb17d-8bfa-4bd8-ad96-ffe7e1ad87b5" width=450/>
+    </div>
 
 1. Select the Social Recovery Template.
 
-![SR-choose-template](https://github.com/smartvaults/smartvaults/assets/71672123/083361bc-86fc-4a4d-9943-157abfdfd760)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/083361bc-86fc-4a4d-9943-157abfdfd760" width=450/>
+    </div>
 
 1. Define the name and description for your vault and choose the signer you wish to use (if you have more than one).
 
-![SR-name-desc](https://github.com/smartvaults/smartvaults/assets/71672123/5c253fb0-087f-46cc-a703-85c66d2d3e50)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/5c253fb0-087f-46cc-a703-85c66d2d3e50" width=450/>
+    </div>
 
 1. Define the recovery keys and the time that needs to elapse before the signatures of those keys become valid.
 
-![SR-add-cosigners](https://github.com/smartvaults/smartvaults/assets/71672123/fb816b38-7273-49b7-8ecf-63d57f120e9f)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/fb816b38-7273-49b7-8ecf-63d57f120e9f" width=450/>
+    </div>
 
-![SR-activation-period](https://github.com/smartvaults/smartvaults/assets/71672123/9fdb5543-f502-4b00-bed2-e9aed3b405ab)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/9fdb5543-f502-4b00-bed2-e9aed3b405ab" width=450/>
+    </div>
 
 1. Define the number of recovery signatures needed for recovery (threshold), finally create the vault.
 
-![SR-threshold](https://github.com/smartvaults/smartvaults/assets/71672123/30e0d076-fde6-4c1d-931c-8bc79d035b6b)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/30e0d076-fde6-4c1d-931c-8bc79d035b6b" width=450/>
+    </div>
 
 1. Congratulations! You have successfully created your first Social Recovery Vault.
 
-![SR-done](https://github.com/smartvaults/smartvaults/assets/71672123/01af7911-ad64-4040-a31e-6f257a366271)
+    <div align="center">
+      <img src="https://github.com/smartvaults/smartvaults/assets/71672123/01af7911-ad64-4040-a31e-6f257a366271" width=450/>
+    </div>
